@@ -1,0 +1,32 @@
+datasets:
+  bhavcopy_cm:
+    description: NSE Capital Market UDiFF bhavcopy
+    url_template: "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_{yyyymmdd}_F_0000.csv.zip"
+    file_format: zip_csv
+    target_table: raw.bhavcopy_cm
+    natural_key: [trade_date, symbol, series]
+    columns:     # VERIFY every source name against the real header on Day 4
+      - {source: TradDt,       target: trade_date,         type: date,    in_staging: true, transform: ""}
+      - {source: BizDt,        target: business_date,      type: date,    in_staging: true, transform: ""}
+      - {source: Sgmt,         target: segment,            type: text,    in_staging: true, transform: ""}
+      - {source: FinInstrmTp,  target: instrument_type,    type: text,    in_staging: true, transform: ""}
+      - {source: FinInstrmId,  target: instrument_id,      type: text,    in_staging: true, transform: ""}
+      - {source: ISIN,         target: isin,               type: text,    in_staging: true, transform: ""}
+      - {source: TckrSymb,     target: symbol,             type: text,    in_staging: true, transform: ""}
+      - {source: SctySrs,      target: series,             type: text,    in_staging: true, transform: ""}
+      - {source: FinInstrmNm,  target: instrument_name,    type: text,    in_staging: true, transform: "nullif(btrim(instrument_name), '')"}
+      - {source: OpnPric,      target: open_price,         type: numeric, in_staging: true, transform: ""}
+      - {source: HghPric,      target: high_price,         type: numeric, in_staging: true, transform: ""}
+      - {source: LwPric,       target: low_price,          type: numeric, in_staging: true, transform: ""}
+      - {source: ClsPric,      target: close_price,        type: numeric, in_staging: true, transform: ""}
+      - {source: LastPric,     target: last_price,         type: numeric, in_staging: true, transform: ""}
+      - {source: PrvsClsgPric, target: prev_close_price,   type: numeric, in_staging: true, transform: ""}
+      - {source: TtlTradgVol,  target: total_traded_qty,   type: bigint,  in_staging: true, transform: ""}
+      - {source: TtlTrfVal,    target: total_traded_value, type: numeric, in_staging: true, transform: ""}
+      - {source: TtlNbOfTxsExctd, target: total_trades,    type: bigint,  in_staging: true, transform: ""}
+    dq_rules:
+      - {name: high_ge_low,        expr: "high_price >= low_price",                         severity: error}
+      - {name: close_within_range, expr: "close_price between low_price and high_price",    severity: error}
+      - {name: positive_close,     expr: "close_price > 0",                                 severity: error}
+      - {name: non_negative_qty,   expr: "total_traded_qty >= 0",                           severity: error}
+      - {name: isin_format,        expr: "isin is null or isin ~ '^[A-Z]{2}[A-Z0-9]{9}[0-9]$'", severity: warn}

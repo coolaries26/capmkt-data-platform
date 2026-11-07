@@ -1,0 +1,19 @@
+name: capmkt
+version: "1.0.0"
+profile: capmkt
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+models:
+  capmkt:
+    staging:      {+materialized: view,  +schema: stg}
+    intermediate: {+materialized: view,  +schema: int}
+    marts:
+      core:       {+materialized: table, +schema: core}
+      recon:      {+materialized: table, +schema: recon}
+      monitoring: {+materialized: table, +schema: monitoring}
+seeds:
+  capmkt:
+    +schema: ref
