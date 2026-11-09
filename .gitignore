@@ -1,10 +1,27 @@
 # Python-generated files
+#-------------------
+# Python
 __pycache__/
 *.py[oc]
 build/
 dist/
 wheels/
 *.egg-info
+.venv/
+.pytest_cache/
+.ruff_cache/
 
-# Virtual environments
-.venv
+# Secrets and local config
+.env
+
+# Data and logs
+data/
+logs/
+*.zip
+*.parquet
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml
