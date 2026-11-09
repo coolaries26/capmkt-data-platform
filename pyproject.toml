@@ -3,7 +3,11 @@ name = "capmkt-data-platform"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+authors = [
+    { name = "Alok Srivastava", email = "coolaries26@gmail.com" }
+]
+
+requires-python = ">=3.11"
 dependencies = [
     "dbt-core>=1.11,<1.12",
     "dbt-postgres>=1.10,<1.11",
@@ -42,4 +46,10 @@ dev = [
     "ruff>=0.17.4",
     "sqlfluff>=4.5.0",
     "sqlfluff-templater-dbt>=4.5.0",
+]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "integration: needs the PostgreSQL test database (capmkt_test)",
 ]
