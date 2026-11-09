@@ -25,6 +25,10 @@ dbt/target/
 dbt/dbt_packages/
 dbt/logs/
 dbt/.user.yml
+# Virtual environments
+.venv
+dbt/.user.yml
+
 =======
 # Virtual environments
 .venv
