@@ -1,0 +1,928 @@
+==================== 2026-11-07T20:47:39.471893Z | 01a1b7c4-5336-70a2-8924-7f858783a0a2 ====================
+20:47:59.760989 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [20.3s]
+[0m03:24:20.268850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002130FE742C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021310F32510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002130D3CD0A0>]}
+
+
+============================== 03:24:20.300155 | 064c2378-28e4-45f7-aace-44200d238cc5 ==============================
+[0m03:24:20.300155 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:24:20.300155 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:24:20.379819 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'PGUSER'
+[0m03:24:20.379819 [debug] [MainThread]: Command `dbt test` failed at 03:24:20.379819 after 0.50 seconds
+[0m03:24:20.379819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002130E130980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002131129E780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021310DDE0F0>]}
+[0m03:24:20.379819 [debug] [MainThread]: Flushing usage events
+[0m03:24:22.821360 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:25:39.636954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C25AD610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C59432C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C59422D0>]}
+
+
+============================== 03:25:39.652641 | af175e31-8ac6-4e34-b7d1-a57f38f3f9d7 ==============================
+[0m03:25:39.652641 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:25:39.652641 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:25:39.703591 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'PGDATABASE'
+[0m03:25:39.708579 [debug] [MainThread]: Command `dbt test` failed at 03:25:39.708579 after 0.47 seconds
+[0m03:25:39.711574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C6963FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C68AE5A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000286C68AE1E0>]}
+[0m03:25:39.715603 [debug] [MainThread]: Flushing usage events
+[0m03:25:42.102947 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:26:06.055629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83CAA1D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83B06D610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83C201190>]}
+
+
+============================== 03:26:06.086826 | d676cc01-d7fa-437c-a4e0-091317331426 ==============================
+[0m03:26:06.086826 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:26:06.086826 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:26:06.132925 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'capmkt'
+[0m03:26:06.146803 [debug] [MainThread]: Command `dbt test` failed at 03:26:06.146803 after 0.57 seconds
+[0m03:26:06.146803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83F003890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83F40CE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B83F433FE0>]}
+[0m03:26:06.146803 [debug] [MainThread]: Flushing usage events
+[0m03:26:08.514111 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:26:56.316167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246730D6F30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002467012D610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246734C2450>]}
+
+
+============================== 03:26:56.340380 | 59f209a5-ba94-44c4-a491-d1cd727ebe44 ==============================
+[0m03:26:56.340380 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:26:56.343381 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:26:57.204358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246710BC8F0>]}
+[0m03:26:57.458399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002467412C350>]}
+[0m03:26:57.474027 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m03:26:58.392117 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m03:26:58.392117 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:26:58.392117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246757CF0B0>]}
+[0m03:27:06.026068 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.staging
+- models.capmkt.marts.core
+- models.capmkt.marts.monitoring
+- models.capmkt.marts.recon
+- models.capmkt.intermediate
+- seeds.capmkt
+[0m03:27:06.064234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D84D70>]}
+[0m03:27:06.404085 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:27:06.413582 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:27:07.166921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675DFFC20>]}
+[0m03:27:07.182591 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
+[0m03:27:07.182591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D2E330>]}
+[0m03:27:07.182591 [info ] [MainThread]: 
+[0m03:27:07.182591 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m03:27:07.199974 [info ] [MainThread]: 
+[0m03:27:07.203693 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m03:27:07.234073 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
+[0m03:27:15.624084 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
+[0m03:27:15.624084 [debug] [ThreadPool]: On list_capmkt_public: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "list_capmkt_public"} */
+select
+      'capmkt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m03:27:15.624084 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:15.793055 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
+
+[0m03:27:15.893364 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "list_capmkt_public"} */
+select
+      'capmkt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m03:27:15.893364 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m03:27:15.909045 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
+[0m03:27:15.911610 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m03:27:15.911610 [debug] [ThreadPool]: On list_capmkt_public: No close available on handle
+[0m03:27:15.911610 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:27:15.911610 [debug] [MainThread]: Connection 'list_capmkt_public' was properly closed.
+[0m03:27:15.911610 [info ] [MainThread]: 
+[0m03:27:15.911610 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 8.71 seconds (8.71s).
+[0m03:27:15.911610 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
+  
+[0m03:27:15.933363 [debug] [MainThread]: Command `dbt test` failed at 03:27:15.932123 after 20.03 seconds
+[0m03:27:15.934172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002467445CC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D2E540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D57FE0>]}
+[0m03:27:15.945024 [debug] [MainThread]: Flushing usage events
+[0m03:27:18.194590 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:27:48.705103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000124950371D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249249D0A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249563DF10>]}
+
+
+============================== 03:27:48.720744 | 18f9c79e-e004-4263-9ccf-a9448c400d40 ==============================
+[0m03:27:48.720744 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:27:48.727320 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:27:49.507257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000124964230B0>]}
+[0m03:27:49.792471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000124957CAFC0>]}
+[0m03:27:49.792471 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m03:27:50.725497 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m03:27:51.279493 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:27:51.279493 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m03:27:51.279493 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:27:51.295123 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.marts.monitoring
+- models.capmkt.staging
+- models.capmkt.marts.recon
+- models.capmkt.marts.core
+- models.capmkt.intermediate
+- seeds.capmkt
+[0m03:27:51.526254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012497756A80>]}
+[0m03:27:51.974317 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:27:51.980696 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:27:52.079103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012497B3B3B0>]}
+[0m03:27:52.079103 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
+[0m03:27:52.079103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000124938DD250>]}
+[0m03:27:52.102584 [info ] [MainThread]: 
+[0m03:27:52.102584 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m03:27:52.102584 [info ] [MainThread]: 
+[0m03:27:52.117244 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m03:27:52.150302 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
+[0m03:27:52.464773 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
+[0m03:27:52.464773 [debug] [ThreadPool]: On list_capmkt_public: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "list_capmkt_public"} */
+select
+      'capmkt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m03:27:52.480379 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:52.596387 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
+
+[0m03:27:52.696753 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "list_capmkt_public"} */
+select
+      'capmkt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m03:27:52.715043 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m03:27:52.718041 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
+[0m03:27:52.720049 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m03:27:52.723045 [debug] [ThreadPool]: On list_capmkt_public: No close available on handle
+[0m03:27:52.727034 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:27:52.729046 [debug] [MainThread]: Connection 'list_capmkt_public' was properly closed.
+[0m03:27:52.731130 [info ] [MainThread]: 
+[0m03:27:52.734160 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.62 seconds (0.62s).
+[0m03:27:52.734160 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
+  
+[0m03:27:52.741698 [debug] [MainThread]: Command `dbt test` failed at 03:27:52.734160 after 4.41 seconds
+[0m03:27:52.743690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249208D610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012495F3EA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249773D070>]}
+[0m03:27:52.745719 [debug] [MainThread]: Flushing usage events
+[0m03:27:54.971731 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:28:31.875830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002481D9DD610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821483A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821481AF0>]}
+
+
+============================== 03:28:31.896567 | 2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b ==============================
+[0m03:28:31.896567 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:28:31.896567 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:28:32.714257 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821A34D70>]}
+[0m03:28:32.961596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821D40110>]}
+[0m03:28:32.977234 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m03:28:33.908963 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m03:28:34.448900 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:28:34.448900 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m03:28:34.448900 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:28:34.464530 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.marts.monitoring
+- models.capmkt.staging
+- models.capmkt.intermediate
+- models.capmkt.marts.recon
+- models.capmkt.marts.core
+- seeds.capmkt
+[0m03:28:34.709481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024823096AE0>]}
+[0m03:28:35.160591 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:28:35.176284 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:28:35.280990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000248234EF110>]}
+[0m03:28:35.280990 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
+[0m03:28:35.280990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820E365A0>]}
+[0m03:28:35.296682 [info ] [MainThread]: 
+[0m03:28:35.296682 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m03:28:35.314816 [info ] [MainThread]: 
+[0m03:28:35.325139 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m03:28:35.348906 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
+[0m03:28:35.693345 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
+[0m03:28:35.693345 [debug] [ThreadPool]: On list_capmkt_public: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "list_capmkt_public"} */
+select
+      'capmkt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'capmkt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m03:28:35.708960 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:28:36.035004 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.324 seconds
+[0m03:28:36.039978 [debug] [ThreadPool]: On list_capmkt_public: ROLLBACK
+[0m03:28:36.039978 [debug] [ThreadPool]: On list_capmkt_public: Close
+[0m03:28:36.066321 [debug] [MainThread]: Using postgres connection "master"
+[0m03:28:36.069321 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m03:28:36.071306 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:28:36.331132 [debug] [MainThread]: SQL status: SELECT 0 in 0.270 seconds
+[0m03:28:36.331132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024823528470>]}
+[0m03:28:36.346797 [debug] [MainThread]: On master: ROLLBACK
+[0m03:28:36.346797 [debug] [MainThread]: On master: COMMIT
+[0m03:28:36.346797 [debug] [MainThread]: Using postgres connection "master"
+[0m03:28:36.346797 [debug] [MainThread]: On master: COMMIT
+[0m03:28:36.346797 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m03:28:36.346797 [debug] [MainThread]: On master: Close
+[0m03:28:36.379115 [debug] [Thread-2 (]: Began running node test.capmkt.not_null_my_second_dbt_model_id.151b76d778
+[0m03:28:36.379115 [debug] [Thread-1 (]: Began running node test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:28:36.379115 [debug] [Thread-3 (]: Began running node test.capmkt.unique_my_first_dbt_model_id.16e066b321
+[0m03:28:36.379115 [debug] [Thread-4 (]: Began running node test.capmkt.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:28:36.379115 [info ] [Thread-2 (]: 2 of 4 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m03:28:36.379115 [info ] [Thread-1 (]: 1 of 4 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m03:28:36.379115 [info ] [Thread-3 (]: 3 of 4 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m03:28:36.379115 [info ] [Thread-4 (]: 4 of 4 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m03:28:36.397844 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.capmkt.not_null_my_second_dbt_model_id.151b76d778'
+[0m03:28:36.415375 [debug] [Thread-2 (]: Began compiling node test.capmkt.not_null_my_second_dbt_model_id.151b76d778
+[0m03:28:36.401354 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.capmkt.unique_my_first_dbt_model_id.16e066b321'
+[0m03:28:36.411953 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.capmkt.unique_my_second_dbt_model_id.57a0f8c493'
+[0m03:28:36.401354 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710'
+[0m03:28:36.490377 [debug] [Thread-2 (]: Writing injected SQL for node "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"
+[0m03:28:36.492363 [debug] [Thread-3 (]: Began compiling node test.capmkt.unique_my_first_dbt_model_id.16e066b321
+[0m03:28:36.494352 [debug] [Thread-4 (]: Began compiling node test.capmkt.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:28:36.496351 [debug] [Thread-1 (]: Began compiling node test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:28:36.514093 [debug] [Thread-3 (]: Writing injected SQL for node "test.capmkt.unique_my_first_dbt_model_id.16e066b321"
+[0m03:28:36.529771 [debug] [Thread-4 (]: Writing injected SQL for node "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m03:28:36.545370 [debug] [Thread-1 (]: Writing injected SQL for node "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m03:28:36.545370 [debug] [Thread-2 (]: Began executing node test.capmkt.not_null_my_second_dbt_model_id.151b76d778
+[0m03:28:36.560989 [debug] [Thread-3 (]: Began executing node test.capmkt.unique_my_first_dbt_model_id.16e066b321
+[0m03:28:36.579222 [debug] [Thread-1 (]: Began executing node test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:28:36.594874 [debug] [Thread-4 (]: Began executing node test.capmkt.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:28:36.641712 [debug] [Thread-2 (]: Writing runtime sql for node "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"
+[0m03:28:36.657357 [debug] [Thread-3 (]: Writing runtime sql for node "test.capmkt.unique_my_first_dbt_model_id.16e066b321"
+[0m03:28:36.663952 [debug] [Thread-1 (]: Writing runtime sql for node "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m03:28:36.663952 [debug] [Thread-4 (]: Writing runtime sql for node "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m03:28:36.679622 [debug] [Thread-2 (]: Using postgres connection "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"
+[0m03:28:36.679622 [debug] [Thread-2 (]: On test.capmkt.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "capmkt"."public"."my_second_dbt_model"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m03:28:36.679622 [debug] [Thread-1 (]: Using postgres connection "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m03:28:36.695285 [debug] [Thread-4 (]: Using postgres connection "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m03:28:36.695285 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:28:36.695285 [debug] [Thread-3 (]: Using postgres connection "test.capmkt.unique_my_first_dbt_model_id.16e066b321"
+[0m03:28:36.695285 [debug] [Thread-1 (]: On test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "capmkt"."public"."my_first_dbt_model"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m03:28:36.695285 [debug] [Thread-4 (]: On test.capmkt.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "capmkt"."public"."my_second_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m03:28:36.695285 [debug] [Thread-3 (]: On test.capmkt.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.unique_my_first_dbt_model_id.16e066b321"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "capmkt"."public"."my_first_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m03:28:36.710871 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m03:28:36.710871 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m03:28:36.710871 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:28:36.886894 [debug] [Thread-2 (]: Postgres adapter: Postgres error: relation "public.my_second_dbt_model" does not exist
+LINE 18: from "capmkt"."public"."my_second_dbt_model"
+              ^
+
+[0m03:28:36.894981 [debug] [Thread-2 (]: On test.capmkt.not_null_my_second_dbt_model_id.151b76d778: ROLLBACK
+[0m03:28:36.897047 [debug] [Thread-2 (]: On test.capmkt.not_null_my_second_dbt_model_id.151b76d778: Close
+[0m03:28:36.917502 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.my_first_dbt_model" does not exist
+LINE 18: from "capmkt"."public"."my_first_dbt_model"
+              ^
+
+[0m03:28:36.917502 [debug] [Thread-1 (]: On test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710: ROLLBACK
+[0m03:28:36.927767 [debug] [Thread-3 (]: Postgres adapter: Postgres error: relation "public.my_first_dbt_model" does not exist
+LINE 19: from "capmkt"."public"."my_first_dbt_model"
+              ^
+
+[0m03:28:36.927767 [debug] [Thread-1 (]: On test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710: Close
+[0m03:28:36.927767 [debug] [Thread-4 (]: Postgres adapter: Postgres error: relation "public.my_second_dbt_model" does not exist
+LINE 19: from "capmkt"."public"."my_second_dbt_model"
+              ^
+
+[0m03:28:36.935867 [debug] [Thread-3 (]: On test.capmkt.unique_my_first_dbt_model_id.16e066b321: ROLLBACK
+[0m03:28:36.937980 [debug] [Thread-4 (]: On test.capmkt.unique_my_second_dbt_model_id.57a0f8c493: ROLLBACK
+[0m03:28:36.948219 [debug] [Thread-4 (]: On test.capmkt.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m03:28:36.948219 [debug] [Thread-3 (]: On test.capmkt.unique_my_first_dbt_model_id.16e066b321: Close
+[0m03:28:36.968714 [debug] [Thread-1 (]: Database Error in test not_null_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m03:28:36.978929 [debug] [Thread-4 (]: Database Error in test unique_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql
+[0m03:28:36.987116 [debug] [Thread-3 (]: Database Error in test unique_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql
+[0m03:28:36.987116 [debug] [Thread-2 (]: Database Error in test not_null_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql
+[0m03:28:36.987116 [error] [Thread-1 (]: 1 of 4 ERROR not_null_my_first_dbt_model_id .................................... [[31mERROR[0m in 0.59s]
+[0m03:28:36.997174 [error] [Thread-4 (]: 4 of 4 ERROR unique_my_second_dbt_model_id ..................................... [[31mERROR[0m in 0.59s]
+[0m03:28:37.015592 [debug] [Thread-4 (]: Finished running node test.capmkt.unique_my_second_dbt_model_id.57a0f8c493
+[0m03:28:37.009187 [debug] [Thread-1 (]: Finished running node test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m03:28:36.997174 [error] [Thread-3 (]: 3 of 4 ERROR unique_my_first_dbt_model_id ...................................... [[31mERROR[0m in 0.60s]
+[0m03:28:37.032191 [debug] [Thread-3 (]: Finished running node test.capmkt.unique_my_first_dbt_model_id.16e066b321
+[0m03:28:37.022967 [debug] [Thread-7 (]: Marking all children of 'test.capmkt.unique_my_second_dbt_model_id.57a0f8c493' to be skipped because of status 'error'.  Reason: Database Error in test unique_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql.
+[0m03:28:37.032191 [debug] [Thread-7 (]: Marking all children of 'test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710' to be skipped because of status 'error'.  Reason: Database Error in test not_null_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql.
+[0m03:28:37.050001 [debug] [Thread-7 (]: Marking all children of 'test.capmkt.unique_my_first_dbt_model_id.16e066b321' to be skipped because of status 'error'.  Reason: Database Error in test unique_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql.
+[0m03:28:37.005187 [error] [Thread-2 (]: 2 of 4 ERROR not_null_my_second_dbt_model_id ................................... [[31mERROR[0m in 0.61s]
+[0m03:28:37.063001 [debug] [Thread-2 (]: Finished running node test.capmkt.not_null_my_second_dbt_model_id.151b76d778
+[0m03:28:37.068015 [debug] [Thread-7 (]: Marking all children of 'test.capmkt.not_null_my_second_dbt_model_id.151b76d778' to be skipped because of status 'error'.  Reason: Database Error in test not_null_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql.
+[0m03:28:37.069842 [debug] [MainThread]: On master: COMMIT
+[0m03:28:37.080998 [debug] [MainThread]: Using postgres connection "master"
+[0m03:28:37.082078 [debug] [MainThread]: On master: COMMIT
+[0m03:28:37.082078 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:28:37.358873 [debug] [MainThread]: SQL status: COMMIT in 0.272 seconds
+[0m03:28:37.361879 [debug] [MainThread]: On master: Close
+[0m03:28:37.364478 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:28:37.364478 [debug] [MainThread]: Connection 'list_capmkt_public' was properly closed.
+[0m03:28:37.364478 [debug] [MainThread]: Connection 'test.capmkt.not_null_my_second_dbt_model_id.151b76d778' was properly closed.
+[0m03:28:37.364478 [debug] [MainThread]: Connection 'test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
+[0m03:28:37.372095 [debug] [MainThread]: Connection 'test.capmkt.unique_my_first_dbt_model_id.16e066b321' was properly closed.
+[0m03:28:37.374220 [debug] [MainThread]: Connection 'test.capmkt.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m03:28:37.374220 [info ] [MainThread]: 
+[0m03:28:37.387189 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 2.06 seconds (2.06s).
+[0m03:28:37.395190 [debug] [MainThread]: Command end result
+[0m03:28:37.818214 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:28:37.833855 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:28:37.880711 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\alsgit\capmkt_data_platform\capmkt\target\run_results.json
+[0m03:28:37.880711 [info ] [MainThread]: 
+[0m03:28:37.880711 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
+[0m03:28:37.880711 [info ] [MainThread]: 
+[0m03:28:37.893774 [error] [MainThread]: [31mFailure in test unique_my_second_dbt_model_id (models\example\schema.yml)[0m
+[0m03:28:37.899702 [error] [MainThread]:   Database Error in test unique_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql
+[0m03:28:37.912152 [info ] [MainThread]: 
+[0m03:28:37.916128 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql
+[0m03:28:37.932200 [info ] [MainThread]: 
+[0m03:28:37.932200 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models\example\schema.yml)[0m
+[0m03:28:37.949685 [error] [MainThread]:   Database Error in test not_null_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m03:28:37.966211 [info ] [MainThread]: 
+[0m03:28:37.974597 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
+[0m03:28:37.977590 [info ] [MainThread]: 
+[0m03:28:37.982326 [error] [MainThread]: [31mFailure in test unique_my_first_dbt_model_id (models\example\schema.yml)[0m
+[0m03:28:37.990512 [error] [MainThread]:   Database Error in test unique_my_first_dbt_model_id (models\example\schema.yml)
+  relation "public.my_first_dbt_model" does not exist
+  LINE 19: from "capmkt"."public"."my_first_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql
+[0m03:28:37.994437 [info ] [MainThread]: 
+[0m03:28:37.998694 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql
+[0m03:28:38.002730 [info ] [MainThread]: 
+[0m03:28:38.011241 [error] [MainThread]: [31mFailure in test not_null_my_second_dbt_model_id (models\example\schema.yml)[0m
+[0m03:28:38.015394 [error] [MainThread]:   Database Error in test not_null_my_second_dbt_model_id (models\example\schema.yml)
+  relation "public.my_second_dbt_model" does not exist
+  LINE 18: from "capmkt"."public"."my_second_dbt_model"
+                ^
+  compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql
+[0m03:28:38.015394 [info ] [MainThread]: 
+[0m03:28:38.026924 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql
+[0m03:28:38.030031 [info ] [MainThread]: 
+[0m03:28:38.041092 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=4
+[0m03:28:38.048809 [debug] [MainThread]: Command `dbt test` failed at 03:28:38.045390 after 6.59 seconds
+[0m03:28:38.048809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821781D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820DB0D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820DB13A0>]}
+[0m03:28:38.048809 [debug] [MainThread]: Flushing usage events
+[0m03:28:40.463163 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:29:39.322663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002214DA1D610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221514FF470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221514FD7C0>]}
+
+
+============================== 03:29:39.329198 | 9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c ==============================
+[0m03:29:39.329198 [info ] [MainThread]: Running with dbt=1.11.17
+[0m03:29:39.345406 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\capmkt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\capmkt\\logs'}
+[0m03:29:40.146679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002214E9AC860>]}
+[0m03:29:40.423280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002214F252D80>]}
+[0m03:29:40.429267 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m03:29:41.311714 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m03:29:41.866492 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 0 files added, 0 files changed.
+[0m03:29:41.866492 [debug] [MainThread]: Partial parsing: deleted file: capmkt://models\example\my_second_dbt_model.sql
+[0m03:29:41.866492 [debug] [MainThread]: Partial parsing: deleted file: capmkt://models\example\my_first_dbt_model.sql
+[0m03:29:42.066837 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.intermediate
+- models.capmkt.marts.core
+- models.capmkt.marts.monitoring
+- models.capmkt.marts.recon
+- models.capmkt.staging
+- seeds.capmkt
+[0m03:29:42.115797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022153175AF0>]}
+[0m03:29:42.452007 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:29:42.464319 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:29:42.580038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221535C66F0>]}
+[0m03:29:42.595642 [info ] [MainThread]: Found 479 macros
+[0m03:29:42.595642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c4dd75a-2973-4ad2-9cda-7db45b4f8b3c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022152FE89B0>]}
+[0m03:29:42.595642 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m03:29:42.616075 [debug] [MainThread]: Command end result
+[0m03:29:42.729514 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
+[0m03:29:42.745151 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
+[0m03:29:42.760763 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\alsgit\capmkt_data_platform\capmkt\target\run_results.json
+[0m03:29:42.764803 [debug] [MainThread]: Command `dbt test` succeeded at 03:29:42.764803 after 3.87 seconds
+[0m03:29:42.764803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022151D2CFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002215354D130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221533BB9B0>]}
+[0m03:29:42.764803 [debug] [MainThread]: Flushing usage events
+[0m03:29:45.104257 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-11-09T10:48:22.166539Z | 01a1bfec-60d3-7821-9053-fb57e97db70f ====================
+10:48:43.616443 [info ]: 
+==================== Execution Summary =====================
+Finished 'internal' successfully [21.4s]
+[0m16:21:02.724378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2A24B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2952D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2A89910>]}
+
+
+============================== 16:21:03.210293 | 742905c5-aad0-46e4-b4b8-e259239480c1 ==============================
+[0m16:21:03.210293 [info ] [MainThread]: Running with dbt=1.11.17
+[0m16:21:03.210293 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'dbt\\logs'}
+[0m16:21:04.331622 [info ] [MainThread]: dbt version: 1.11.17
+[0m16:21:04.331622 [info ] [MainThread]: python version: 3.11.18
+[0m16:21:04.331622 [info ] [MainThread]: python path: C:\alsgit\capmkt_data_platform\.venv\Scripts\python.exe
+[0m16:21:04.331622 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m16:21:04.644968 [info ] [MainThread]: Using profiles dir at C:\Users\Admin\.dbt
+[0m16:21:04.644968 [info ] [MainThread]: Using profiles.yml file at C:\Users\Admin\.dbt\profiles.yml
+[0m16:21:04.644968 [info ] [MainThread]: Using dbt_project.yml file at dbt\dbt_project.yml
+[0m16:21:04.663192 [info ] [MainThread]: adapter type: postgres
+[0m16:21:04.666388 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:21:05.084315 [info ] [MainThread]: Configuration:
+[0m16:21:05.084315 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:21:05.084315 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:21:05.084315 [info ] [MainThread]: Required dependencies:
+[0m16:21:05.084315 [debug] [MainThread]: Executing "git --help"
+[0m16:21:05.315831 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:21:05.315831 [debug] [MainThread]: STDERR: "b''"
+[0m16:21:05.315831 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:21:05.315831 [info ] [MainThread]: Connection:
+[0m16:21:05.315831 [info ] [MainThread]:   host: local
+[0m16:21:05.315831 [info ] [MainThread]:   port: 5432
+[0m16:21:05.315831 [info ] [MainThread]:   user: capmkt
+[0m16:21:05.334405 [info ] [MainThread]:   database: capmkt
+[0m16:21:05.339484 [info ] [MainThread]:   schema: default
+[0m16:21:05.344698 [info ] [MainThread]:   connect_timeout: 10
+[0m16:21:05.352912 [info ] [MainThread]:   role: None
+[0m16:21:05.352912 [info ] [MainThread]:   search_path: None
+[0m16:21:05.370252 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:21:05.370252 [info ] [MainThread]:   sslmode: None
+[0m16:21:05.370252 [info ] [MainThread]:   sslcert: None
+[0m16:21:05.387281 [info ] [MainThread]:   sslkey: None
+[0m16:21:05.387281 [info ] [MainThread]:   sslrootcert: None
+[0m16:21:05.387281 [info ] [MainThread]:   application_name: dbt
+[0m16:21:05.403444 [info ] [MainThread]:   retries: 1
+[0m16:21:05.403444 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:21:06.853394 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:21:16.582073 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:21:16.582073 [debug] [MainThread]: On debug: select 1 as id
+[0m16:21:16.582073 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:22:56.722101 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "local" (185.38.109.200), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.201), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.202), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.203), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.204), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.205), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.206), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.207), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.208), port 5432 failed: timeout expired
+connection to server at "local" (185.38.109.209), port 5432 failed: timeout expired
+
+[0m16:24:36.887757 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:24:36.890948 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:24:36.894137 [debug] [MainThread]: On debug: No close available on handle
+[0m16:24:36.896135 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:24:36.899140 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:24:36.903566 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  connection to server at "local" (185.38.109.209), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.208), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.207), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.206), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.205), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.204), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.203), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.202), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.201), port 5432 failed: timeout expired
+  connection to server at "local" (185.38.109.200), port 5432 failed: timeout expired
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:24:36.910576 [debug] [MainThread]: Command `dbt debug` failed at 16:24:36.909594 after 214.52 seconds
+[0m16:24:36.913580 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:24:36.915578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEEC14F790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF26BC790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2952410>]}
+[0m16:24:36.920582 [debug] [MainThread]: Flushing usage events
+[0m16:24:38.245818 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:26:28.160442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F56D5990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F56D6990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F56D6750>]}
+
+
+============================== 16:26:28.176146 | 2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4 ==============================
+[0m16:26:28.176146 [info ] [MainThread]: Running with dbt=1.11.17
+[0m16:26:28.176146 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test --project-dir dbt', 'use_experimental_parser': 'False', 'log_path': 'dbt\\logs'}
+[0m16:26:29.354569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F6909750>]}
+[0m16:26:29.603373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F20D4690>]}
+[0m16:26:29.603825 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:26:30.939125 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m16:26:31.184047 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:26:31.199664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F469B810>]}
+[0m16:26:37.583609 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.marts.monitoring
+- models.capmkt.marts.core
+- models.capmkt.staging
+- models.capmkt.marts.recon
+- models.capmkt.intermediate
+- seeds.capmkt
+[0m16:26:37.614868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F6DB3010>]}
+[0m16:26:37.837136 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:26:37.852820 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:26:38.704747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F57992D0>]}
+[0m16:26:38.721265 [info ] [MainThread]: Found 479 macros
+[0m16:26:38.721265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2c2f012e-4c57-46d7-8dbe-e9f11bc68ed4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F6D68D90>]}
+[0m16:26:38.721265 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m16:26:38.721265 [debug] [MainThread]: Command end result
+[0m16:26:38.940456 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:26:38.958850 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:26:38.971205 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt\target\run_results.json
+[0m16:26:38.979327 [debug] [MainThread]: Command `dbt test` succeeded at 16:26:38.979327 after 11.08 seconds
+[0m16:26:38.981435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F560D7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0F6BECBD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D0EEE0F050>]}
+[0m16:26:38.981435 [debug] [MainThread]: Flushing usage events
+[0m16:26:40.233195 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:27:04.785091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9EDE6110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9ED12D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9EE84A50>]}
+
+
+============================== 16:27:04.791662 | 7e7d6e64-9f01-4d93-8b53-8de7c4c0e005 ==============================
+[0m16:27:04.791662 [info ] [MainThread]: Running with dbt=1.11.17
+[0m16:27:04.791662 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\dbt\\logs'}
+[0m16:27:05.589120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015EA00B1DD0>]}
+[0m16:27:05.855852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9B7DFDD0>]}
+[0m16:27:05.872442 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:27:06.949488 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m16:27:07.208009 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:27:07.210972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9ED31050>]}
+[0m16:27:10.843353 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.marts.recon
+- models.capmkt.marts.core
+- models.capmkt.staging
+- models.capmkt.marts.monitoring
+- models.capmkt.intermediate
+- seeds.capmkt
+[0m16:27:10.859058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9FF6CBD0>]}
+[0m16:27:11.094295 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\dbt\target\manifest.json
+[0m16:27:11.103932 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\dbt\target\semantic_manifest.json
+[0m16:27:11.179545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015EA057AA90>]}
+[0m16:27:11.179545 [info ] [MainThread]: Found 479 macros
+[0m16:27:11.195156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e7d6e64-9f01-4d93-8b53-8de7c4c0e005', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015EA03C0550>]}
+[0m16:27:11.195156 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m16:27:11.195156 [debug] [MainThread]: Command end result
+[0m16:27:11.319271 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\dbt\target\manifest.json
+[0m16:27:11.334875 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\dbt\target\semantic_manifest.json
+[0m16:27:11.350538 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\alsgit\capmkt_data_platform\dbt\target\run_results.json
+[0m16:27:11.350538 [debug] [MainThread]: Command `dbt test` succeeded at 16:27:11.350538 after 6.84 seconds
+[0m16:27:11.350538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9EBAAAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015EA0452150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015E9829D150>]}
+[0m16:27:11.350538 [debug] [MainThread]: Flushing usage events
+[0m16:27:12.588144 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:27:34.816624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025005255910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500523F750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025005254410>]}
+
+
+============================== 16:27:34.823205 | e4a1dc3b-10a5-43f9-b806-aead023033fc ==============================
+[0m16:27:34.823205 [info ] [MainThread]: Running with dbt=1.11.17
+[0m16:27:34.838878 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\alsgit\\capmkt_data_platform\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'C:\\alsgit\\capmkt_data_platform\\dbt\\logs'}
+[0m16:27:34.953970 [info ] [MainThread]: dbt version: 1.11.17
+[0m16:27:34.953970 [info ] [MainThread]: python version: 3.11.18
+[0m16:27:34.953970 [info ] [MainThread]: python path: C:\alsgit\capmkt_data_platform\.venv\Scripts\python.exe
+[0m16:27:34.953970 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m16:27:35.202531 [info ] [MainThread]: Using profiles dir at C:\alsgit\capmkt_data_platform\dbt
+[0m16:27:35.218136 [info ] [MainThread]: Using profiles.yml file at C:\alsgit\capmkt_data_platform\dbt\profiles.yml
+[0m16:27:35.284198 [info ] [MainThread]: Using dbt_project.yml file at C:\alsgit\capmkt_data_platform\dbt\dbt_project.yml
+[0m16:27:35.302649 [info ] [MainThread]: adapter type: postgres
+[0m16:27:35.318367 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:27:35.854477 [info ] [MainThread]: Configuration:
+[0m16:27:35.870049 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:27:35.870049 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:27:35.870049 [info ] [MainThread]: Required dependencies:
+[0m16:27:35.881505 [debug] [MainThread]: Executing "git --help"
+[0m16:27:36.035209 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:27:36.038770 [debug] [MainThread]: STDERR: "b''"
+[0m16:27:36.038770 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:27:36.038770 [info ] [MainThread]: Connection:
+[0m16:27:36.038770 [info ] [MainThread]:   host: localhost
+[0m16:27:36.038770 [info ] [MainThread]:   port: 5432
+[0m16:27:36.054049 [info ] [MainThread]:   user: capmkt
+[0m16:27:36.057337 [info ] [MainThread]:   database: capmkt
+[0m16:27:36.060333 [info ] [MainThread]:   schema: public
+[0m16:27:36.063326 [info ] [MainThread]:   connect_timeout: 10
+[0m16:27:36.066568 [info ] [MainThread]:   role: None
+[0m16:27:36.073500 [info ] [MainThread]:   search_path: None
+[0m16:27:36.077495 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:27:36.080496 [info ] [MainThread]:   sslmode: None
+[0m16:27:36.085335 [info ] [MainThread]:   sslcert: None
+[0m16:27:36.093561 [info ] [MainThread]:   sslkey: None
+[0m16:27:36.096558 [info ] [MainThread]:   sslrootcert: None
+[0m16:27:36.099562 [info ] [MainThread]:   application_name: dbt
+[0m16:27:36.102559 [info ] [MainThread]:   retries: 1
+[0m16:27:36.106449 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:27:37.074864 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:27:37.303935 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:27:37.303935 [debug] [MainThread]: On debug: select 1 as id
+[0m16:27:37.303935 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:27:37.653122 [debug] [MainThread]: SQL status: SELECT 1 in 0.342 seconds
+[0m16:27:37.657750 [debug] [MainThread]: On debug: Close
+[0m16:27:37.660747 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:27:37.661911 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:27:37.682957 [debug] [MainThread]: Command `dbt debug` succeeded at 16:27:37.681919 after 3.13 seconds
+[0m16:27:37.684937 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:27:37.689400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250051823D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250066381D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002507E79D3D0>]}
+[0m16:27:37.693008 [debug] [MainThread]: Flushing usage events
+[0m16:27:38.890321 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:28:15.756261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024203D74F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024203CB1450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024203CB1050>]}
+
+
+============================== 16:28:15.771950 | d723ad83-af26-419e-9d96-d563b37404f3 ==============================
+[0m16:28:15.771950 [info ] [MainThread]: Running with dbt=1.11.17
+[0m16:28:15.771950 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test --project-dir dbt', 'use_experimental_parser': 'False', 'log_path': 'dbt\\logs'}
+[0m16:28:16.499977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002420352E950>]}
+[0m16:28:16.726209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002427FF75090>]}
+[0m16:28:16.726209 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m16:28:17.663014 [debug] [MainThread]: checksum: 6b6411fb925d7fe017d7428f9d9af996704b52c1bbfb75b401b39f0bcbc3f5dc, vars: {}, profile: , target: , version: 1.11.17
+[0m16:28:17.910630 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:28:17.910630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024202D43590>]}
+[0m16:28:21.536872 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 6 unused configuration paths:
+- models.capmkt.staging
+- models.capmkt.marts.monitoring
+- models.capmkt.marts.recon
+- models.capmkt.intermediate
+- models.capmkt.marts.core
+- seeds.capmkt
+[0m16:28:21.549068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024203C8C510>]}
+[0m16:28:21.772325 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:28:21.772325 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:28:21.872680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242053F5A90>]}
+[0m16:28:21.872680 [info ] [MainThread]: Found 479 macros
+[0m16:28:21.872680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd723ad83-af26-419e-9d96-d563b37404f3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000242053859D0>]}
+[0m16:28:21.872680 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m16:28:21.898107 [debug] [MainThread]: Command end result
+[0m16:28:22.036302 [debug] [MainThread]: Wrote artifact WritableManifest to dbt\target\manifest.json
+[0m16:28:22.051914 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt\target\semantic_manifest.json
+[0m16:28:22.051914 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt\target\run_results.json
+[0m16:28:22.067521 [debug] [MainThread]: Command `dbt test` succeeded at 16:28:22.067521 after 6.58 seconds
+[0m16:28:22.067521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024203CC4DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024205383950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002427D21D250>]}
+[0m16:28:22.073560 [debug] [MainThread]: Flushing usage events
+[0m16:28:23.293318 [debug] [MainThread]: An error was encountered while trying to flush usage events
