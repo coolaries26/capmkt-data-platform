@@ -3,29 +3,11 @@ name = "capmkt-data-platform"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "dbt-core>=1.11,<1.12",
-    "dbt-postgres>=1.10,<1.11",
-    "numpy>=1.26",
-    "pandas>=2.2",
-    "plotly>=5.24",
-    "pre-commit>=4.7.0",
-    "psycopg[binary]>=3.2",
-    "pydantic-settings>=2.4",
-    "pyspark>=4.3.0",
-    "pytest>=9.2.0",
-    "pytest-cov>=7.1.0",
-    "pyyaml>=6",
-    "requests>=2.32",
-    "ruff>=0.17.4",
-    "sqlalchemy>=2.0,<2.1",
-    "sqlfluff>=4.5.0",
-    "sqlfluff-templater-dbt>=4.5.0",
-    "streamlit>=1.40",
-    "tenacity>=9",
-    "typer>=0.12",
+authors = [
+    { name = "Alok Srivastava", email = "coolaries26@gmail.com" }
 ]
+requires-python = ">=3.11"
+dependencies = []
 
 [project.scripts]
 capmkt-data-platform = "capmkt_data_platform:main"
@@ -33,13 +15,3 @@ capmkt-data-platform = "capmkt_data_platform:main"
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
-
-[dependency-groups]
-dev = [
-    "pre-commit>=4.7.0",
-    "pytest>=9.2.0",
-    "pytest-cov>=7.1.0",
-    "ruff>=0.17.4",
-    "sqlfluff>=4.5.0",
-    "sqlfluff-templater-dbt>=4.5.0",
-]
