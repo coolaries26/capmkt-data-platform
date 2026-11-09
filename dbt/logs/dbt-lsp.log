@@ -1,0 +1,463 @@
+==================== 2026-11-07T20:47:39.591446Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-07T20:47:39.592937Z | 0666c97e-c001-4506-8bfc-6d7d9453911d ====================
+20:47:39.593205 [info ]: Starting dbt LSP server
+20:47:39.593512 [info ]: Connecting to LSP client on port 8000
+20:47:39.601594 [info ]: Successfully connected to LSP client
+20:47:39.601705 [info ]: Creating LSP service...
+20:47:39.610203 [info ]: Creating LSP server...
+20:47:39.610275 [info ]: Starting LSP server...
+20:47:39.934802 [info ]: Loading ~/.dbt/profiles.yml
+20:48:17.043233 [info ]: Loading ~/.dbt/profiles.yml
+20:48:25.488230 [debug]: Ignoring unsupported LSP notification
+20:53:58.155224 [debug]: Ignoring unsupported LSP notification
+20:53:58.166403 [debug]: Ignoring unsupported LSP notification
+20:55:15.371922 [info ]: Loading ~/.dbt/profiles.yml
+20:55:16.974994 [info ]: Loading ~/.dbt/profiles.yml
+20:55:49.083544 [info ]: Loading ~/.dbt/profiles.yml
+20:56:14.311788 [info ]: Loading ~/.dbt/profiles.yml
+20:56:52.121141 [info ]: Loading ~/.dbt/profiles.yml
+20:56:54.409839 [info ]: Loading ~/.dbt/profiles.yml
+20:57:22.004262 [info ]: Loading ~/.dbt/profiles.yml
+20:57:30.475056 [info ]: Loading ~/.dbt/profiles.yml
+20:57:32.862320 [info ]: Loading ~/.dbt/profiles.yml
+20:57:57.199458 [info ]: Loading ~/.dbt/profiles.yml
+20:58:00.142083 [info ]: Loading ~/.dbt/profiles.yml
+20:59:09.888726 [info ]: Loading ~/.dbt/profiles.yml
+20:59:38.049688 [info ]: Loading ~/.dbt/profiles.yml
+20:59:38.286520 [info ]: Loading ~/.dbt/profiles.yml
+20:59:38.830760 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-11-07T21:01:01.576611Z | c8212c24-6bbf-4d97-bb9a-ea8b5f4f7a00 ====================
+21:01:01.577191 [info ]: Started loading project
+21:01:01.580609 [info ]: Loading ~/.dbt/profiles.yml
+21:01:01.582289 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
+21:01:01.582374 [info ]: Finished loading project [  0.01s]
+21:01:01.582792 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [6ms]
+==================== 2026-11-07T21:02:20.788974Z | 20030554-4484-44b8-882c-d37d570417a0 ====================
+21:02:20.789633 [info ]: Started loading project
+21:02:20.793471 [info ]: Loading profiles.yml
+21:02:20.795362 [info ]: Finished loading project [  0.01s]
+21:02:20.795716 [error]: [IoError (dbt1001)]: Profile 'capmkt' not found in profiles.yml
+  --> dbt_project.yml:3:10
+21:02:20.796592 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [7ms]
+21:02:21.561603 [info ]: Loading profiles.yml
+21:02:25.244469 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:03:54.220950Z | 14f71886-080b-4f0f-b941-423324bdd3b4 ====================
+21:03:54.221227 [info ]: Started loading project
+21:03:54.223799 [info ]: Loading profiles.yml
+21:03:54.227575 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:03:54.229409 [info ]: Finished loading project [  0.01s]
+21:03:54.229514 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [8ms]
+21:05:26.912946 [info ]: Loading profiles.yml
+21:07:22.587992 [info ]: Loading profiles.yml
+21:08:38.528508 [info ]: Loading profiles.yml
+21:13:12.705969 [info ]: Loading profiles.yml
+21:14:56.420126 [info ]: Loading profiles.yml
+21:14:59.309593 [info ]: Loading profiles.yml
+21:16:19.932261 [info ]: Loading profiles.yml
+21:21:48.702963 [info ]: Loading profiles.yml
+21:22:01.855345 [info ]: Loading profiles.yml
+21:22:02.403309 [info ]: Loading profiles.yml
+21:22:06.760656 [info ]: Loading profiles.yml
+21:22:21.684257 [info ]: Loading profiles.yml
+21:37:45.722964 [info ]: Loading profiles.yml
+21:37:59.810039 [info ]: Loading profiles.yml
+21:42:01.250098 [info ]: Loading profiles.yml
+21:42:59.129582 [info ]: Loading profiles.yml
+21:44:24.240998 [info ]: Loading profiles.yml
+21:45:19.205669 [info ]: Loading profiles.yml
+21:45:22.118523 [info ]: Loading profiles.yml
+21:45:28.422582 [info ]: Loading profiles.yml
+21:46:02.772062 [info ]: Loading profiles.yml
+21:46:05.726314 [info ]: Loading profiles.yml
+21:46:10.561295 [info ]: Loading profiles.yml
+21:46:20.053030 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:46:24.322860Z | 71053903-961a-48a4-b364-97e8e3ab581e ====================
+21:46:24.323105 [info ]: Started loading project
+21:46:24.326517 [info ]: Loading profiles.yml
+21:46:24.328232 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:46:24.328312 [info ]: Finished loading project [  0.01s]
+21:46:24.328417 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [5ms]
+21:46:38.998063 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:47:12.718703Z | 931d73b5-3df1-48a8-a6fa-666f74b6fdfa ====================
+21:47:12.718903 [info ]: Started loading project
+21:47:12.720727 [info ]: Loading profiles.yml
+21:47:12.721968 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:47:12.722050 [info ]: Finished loading project [  0.00s]
+21:47:12.722117 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:47:15.273814 [debug]: Ignoring unsupported LSP notification
+21:47:54.204193 [info ]: Loading profiles.yml
+21:47:54.507442 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:48:18.714964Z | 269a8d7e-df7e-475d-8611-9a5356dfe0cc ====================
+21:48:18.715334 [info ]: Started loading project
+21:48:18.717346 [info ]: Loading profiles.yml
+21:48:18.718597 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:48:18.718665 [info ]: Finished loading project [  0.00s]
+21:48:18.718752 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:48:19.424997Z | 0a7225b9-8ead-48a5-a3f8-1885295310be ====================
+21:48:19.425196 [info ]: Started loading project
+21:48:19.427408 [info ]: Loading profiles.yml
+21:48:19.428607 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:48:19.428691 [info ]: Finished loading project [  0.00s]
+21:48:19.428749 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:48:54.869902Z | 0f5277b8-ecdb-47cc-8bff-8e054bfc2349 ====================
+21:48:54.870099 [info ]: Started loading project
+21:48:54.871748 [info ]: Loading profiles.yml
+21:48:54.872803 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:48:54.872889 [info ]: Finished loading project [  0.00s]
+21:48:54.872948 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:48:57.602249 [info ]: Loading profiles.yml
+21:49:44.604388 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:50:17.005381Z | 0ac662c4-e2d1-4562-a3c2-ec3bffc1ba71 ====================
+21:50:17.005741 [info ]: Started loading project
+21:50:17.007632 [info ]: Loading profiles.yml
+21:50:17.008732 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:50:17.008818 [info ]: Finished loading project [  0.00s]
+21:50:17.008880 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:51:28.018302 [debug]: Ignoring unsupported LSP notification
+==================== 2026-11-07T21:51:38.908397Z | 30bcca1a-50f8-4ddf-a5dc-da04e0c3f8cf ====================
+21:51:38.908840 [info ]: Started loading project
+21:51:38.916055 [info ]: Loading profiles.yml
+21:51:38.919008 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:51:38.919162 [info ]: Finished loading project [  0.01s]
+21:51:38.919343 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [10ms]
+==================== 2026-11-07T21:52:13.706156Z | 1c083109-f4a6-44fa-a6fd-070de3abd183 ====================
+21:52:13.706358 [info ]: Started loading project
+21:52:13.708008 [info ]: Loading profiles.yml
+21:52:13.709053 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:52:13.709133 [info ]: Finished loading project [  0.00s]
+21:52:13.709202 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:52:14.173268Z | 03d7fe20-4868-4f71-88ff-52ba769a1e8f ====================
+21:52:14.173462 [info ]: Started loading project
+21:52:14.175090 [info ]: Loading profiles.yml
+21:52:14.176163 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:52:14.176246 [info ]: Finished loading project [  0.00s]
+21:52:14.176337 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:53:18.907787Z | 1da18954-aa36-430d-b6c7-1ffa8cd153f1 ====================
+21:53:18.907985 [info ]: Started loading project
+21:53:18.909963 [info ]: Loading profiles.yml
+21:53:18.911171 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
+(in :1:1)
+21:53:18.911251 [info ]: Finished loading project [  0.00s]
+21:53:18.911327 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:53:34.165938 [info ]: Loading profiles.yml
+21:54:20.841513 [info ]: Loading profiles.yml
+21:54:21.241891 [info ]: Loading profiles.yml
+21:54:32.844165 [info ]: Loading profiles.yml
+21:54:44.240700 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:55:23.170207Z | 7c1a125a-07ad-423a-a0e5-d3cf7afa9204 ====================
+21:55:23.170435 [info ]: Started loading project
+21:55:23.172653 [info ]: Loading profiles.yml
+21:55:23.174010 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
+(in :1:1)
+21:55:23.174080 [info ]: Finished loading project [  0.00s]
+21:55:23.174168 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:55:52.384743Z | b2e75d67-55fa-4024-beb7-8ab2339b240f ====================
+21:55:52.384928 [info ]: Started loading project
+21:55:52.386729 [info ]: Loading profiles.yml
+21:55:52.387906 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
+(in :1:1)
+21:55:52.387985 [info ]: Finished loading project [  0.00s]
+21:55:52.388051 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:56:38.533553 [debug]: Ignoring unsupported LSP notification
+==================== 2026-11-07T21:56:42.173509Z | 7b81f53d-cfde-4ec3-a198-3953461b0f1b ====================
+21:56:42.173912 [info ]: Started loading project
+21:56:42.175746 [info ]: Loading profiles.yml
+21:56:42.177009 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
+(in :1:1)
+21:56:42.177082 [info ]: Finished loading project [  0.00s]
+21:56:42.177182 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+21:57:07.023199 [info ]: Loading profiles.yml
+21:57:07.391284 [info ]: Loading profiles.yml
+21:57:08.477940 [info ]: Loading profiles.yml
+==================== 2026-11-07T21:57:34.855498Z | 21d25b25-621a-4f37-a749-5664343c72ee ====================
+21:57:34.855664 [info ]: Started loading project
+21:57:34.857274 [info ]: Loading profiles.yml
+21:57:34.858494 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
+21:57:34.858566 [info ]: Finished loading project [  0.00s]
+21:57:34.858651 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [3ms]
+==================== 2026-11-07T21:58:17.777998Z | ff3d7499-5812-4629-a2ec-a3c36bdb6762 ====================
+21:58:17.778210 [info ]: Started loading project
+21:58:17.782742 [info ]: Loading profiles.yml
+21:58:17.785302 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
+21:58:17.785835 [info ]: Finished loading project [  0.01s]
+21:58:17.785907 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [7ms]
+21:58:37.253056 [info ]: Loading profiles.yml
+21:59:13.576661 [info ]: Loading profiles.yml
+21:59:22.941064 [info ]: Loading profiles.yml
+22:08:18.857864 [info ]: Loading profiles.yml
+22:08:19.402786 [info ]: Loading profiles.yml
+22:08:20.461260 [info ]: Loading profiles.yml
+22:08:20.993509 [info ]: Loading profiles.yml
+22:08:21.480032 [info ]: Loading profiles.yml
+22:08:21.951123 [info ]: Loading profiles.yml
+22:08:23.330739 [info ]: Loading profiles.yml
+22:08:25.457826 [info ]: Loading profiles.yml
+22:08:26.159579 [info ]: Loading profiles.yml
+22:08:26.979208 [info ]: Loading profiles.yml
+22:08:27.689158 [info ]: Loading profiles.yml
+22:31:07.587678 [info ]: Loading profiles.yml
+09:33:00.071124 [info ]: Loading profiles.yml
+09:33:00.211117 [info ]: Loading profiles.yml
+09:33:02.333661 [info ]: Loading profiles.yml
+09:33:02.722510 [info ]: Loading profiles.yml
+09:37:51.758039 [info ]: Loading profiles.yml
+09:38:22.377289 [info ]: Loading profiles.yml
+09:40:18.532844 [info ]: Loading profiles.yml
+09:40:48.775958 [info ]: Loading profiles.yml
+09:41:03.247132 [info ]: Loading profiles.yml
+09:41:20.716617 [info ]: Loading profiles.yml
+09:41:21.367944 [info ]: Loading profiles.yml
+09:41:23.056119 [info ]: Loading profiles.yml
+09:41:24.555092 [info ]: Loading profiles.yml
+09:41:24.968160 [info ]: Loading profiles.yml
+09:41:25.636860 [info ]: Loading profiles.yml
+09:41:26.209856 [info ]: Loading profiles.yml
+09:41:26.804575 [info ]: Loading profiles.yml
+09:41:27.347881 [info ]: Loading profiles.yml
+09:41:28.184131 [info ]: Loading profiles.yml
+09:41:29.073420 [info ]: Loading profiles.yml
+09:41:29.646158 [info ]: Loading profiles.yml
+09:41:30.111391 [info ]: Loading profiles.yml
+09:41:30.601673 [info ]: Loading profiles.yml
+09:41:31.727894 [info ]: Loading profiles.yml
+09:41:32.147135 [info ]: Loading profiles.yml
+09:41:32.643747 [info ]: Loading profiles.yml
+09:41:33.176480 [info ]: Loading profiles.yml
+09:41:33.653197 [info ]: Loading profiles.yml
+09:41:34.182833 [info ]: Loading profiles.yml
+09:41:34.655073 [info ]: Loading profiles.yml
+09:41:35.156190 [info ]: Loading profiles.yml
+09:41:35.657241 [info ]: Loading profiles.yml
+09:41:36.162141 [info ]: Loading profiles.yml
+09:41:36.772692 [info ]: Loading profiles.yml
+09:41:37.183241 [info ]: Loading profiles.yml
+09:41:37.672712 [info ]: Loading profiles.yml
+09:41:38.250257 [info ]: Loading profiles.yml
+09:41:38.696889 [info ]: Loading profiles.yml
+09:41:39.168548 [info ]: Loading profiles.yml
+09:41:40.271567 [info ]: Loading profiles.yml
+09:41:48.651960 [info ]: Loading profiles.yml
+09:41:51.823033 [info ]: Loading profiles.yml
+09:43:46.276641 [info ]: Loading profiles.yml
+09:43:47.126924 [info ]: Loading profiles.yml
+09:43:47.794666 [info ]: Loading profiles.yml
+09:43:48.192574 [info ]: Loading profiles.yml
+09:43:48.852027 [info ]: Loading profiles.yml
+09:43:49.622192 [info ]: Loading profiles.yml
+09:43:50.201136 [info ]: Loading profiles.yml
+09:43:50.670166 [info ]: Loading profiles.yml
+09:43:51.109225 [info ]: Loading profiles.yml
+09:43:51.953117 [info ]: Loading profiles.yml
+09:43:55.894614 [info ]: Loading profiles.yml
+09:43:56.316086 [info ]: Loading profiles.yml
+09:43:57.210574 [info ]: Loading profiles.yml
+09:43:57.750024 [info ]: Loading profiles.yml
+09:43:58.613237 [info ]: Loading profiles.yml
+09:43:59.228399 [info ]: Loading profiles.yml
+09:44:01.091126 [info ]: Loading profiles.yml
+09:44:01.621601 [info ]: Loading profiles.yml
+09:44:02.763436 [info ]: Loading profiles.yml
+09:44:04.348755 [info ]: Loading profiles.yml
+09:44:05.330638 [info ]: Loading profiles.yml
+09:44:06.432573 [info ]: Loading profiles.yml
+09:44:08.056022 [info ]: Loading profiles.yml
+09:44:08.761710 [info ]: Loading profiles.yml
+09:44:09.650089 [info ]: Loading profiles.yml
+09:44:10.097237 [info ]: Loading profiles.yml
+09:44:12.081982 [info ]: Loading profiles.yml
+09:44:12.522308 [info ]: Loading profiles.yml
+09:44:21.045041 [info ]: Loading profiles.yml
+09:44:21.443732 [info ]: Loading profiles.yml
+09:44:21.689385 [info ]: Loading profiles.yml
+09:44:21.983259 [info ]: Loading profiles.yml
+09:44:22.700064 [info ]: Loading profiles.yml
+09:44:23.407581 [info ]: Loading profiles.yml
+09:44:25.509660 [info ]: Loading profiles.yml
+09:44:26.044812 [info ]: Loading profiles.yml
+09:44:27.657811 [info ]: Loading profiles.yml
+09:44:28.452765 [info ]: Loading profiles.yml
+09:44:29.029438 [info ]: Loading profiles.yml
+09:44:29.433080 [info ]: Loading profiles.yml
+09:44:34.888974 [info ]: Loading profiles.yml
+09:44:35.419040 [info ]: Loading profiles.yml
+09:44:36.948525 [info ]: Loading profiles.yml
+09:44:43.782218 [info ]: Loading profiles.yml
+09:44:44.861703 [info ]: Loading profiles.yml
+09:44:45.397912 [info ]: Loading profiles.yml
+09:44:45.953595 [info ]: Loading profiles.yml
+09:44:46.433184 [info ]: Loading profiles.yml
+09:44:47.077274 [info ]: Loading profiles.yml
+09:44:49.316569 [info ]: Loading profiles.yml
+09:44:50.486467 [info ]: Loading profiles.yml
+09:44:53.865222 [info ]: Loading profiles.yml
+09:44:56.257810 [info ]: Loading profiles.yml
+09:44:56.986803 [info ]: Loading profiles.yml
+09:44:58.279088 [info ]: Loading profiles.yml
+09:44:58.784693 [info ]: Loading profiles.yml
+09:44:59.284109 [info ]: Loading profiles.yml
+09:44:59.852600 [info ]: Loading profiles.yml
+09:45:00.370090 [info ]: Loading profiles.yml
+09:45:01.103813 [info ]: Loading profiles.yml
+09:45:01.659790 [info ]: Loading profiles.yml
+09:45:03.049696 [info ]: Loading profiles.yml
+09:45:03.688723 [info ]: Loading profiles.yml
+09:45:04.210997 [info ]: Loading profiles.yml
+09:49:09.994286 [info ]: Loading profiles.yml
+09:50:19.053158 [info ]: Loading profiles.yml
+09:50:20.089069 [info ]: Loading profiles.yml
+09:50:22.512163 [info ]: Loading profiles.yml
+09:50:22.583269 [info ]: Loading profiles.yml
+09:50:24.342318 [info ]: Loading profiles.yml
+09:50:26.372022 [info ]: Loading profiles.yml
+09:50:27.060612 [info ]: Loading profiles.yml
+09:50:28.182544 [info ]: Loading profiles.yml
+09:50:32.530397 [info ]: Loading profiles.yml
+09:50:33.364639 [info ]: Loading profiles.yml
+09:50:35.889001 [info ]: Loading profiles.yml
+09:50:36.400516 [info ]: Loading profiles.yml
+09:50:36.995086 [info ]: Loading profiles.yml
+09:50:37.447397 [info ]: Loading profiles.yml
+09:50:38.119814 [info ]: Loading profiles.yml
+09:51:38.977766 [debug]: Ignoring unsupported LSP notification
+09:53:02.428669 [info ]: Loading profiles.yml
+09:53:03.004626 [info ]: Loading profiles.yml
+09:53:03.660282 [info ]: Loading profiles.yml
+09:53:05.320377 [info ]: Loading profiles.yml
+09:53:06.586558 [info ]: Loading profiles.yml
+09:53:08.234552 [info ]: Loading profiles.yml
+09:53:09.375083 [info ]: Loading profiles.yml
+09:53:10.057236 [info ]: Loading profiles.yml
+09:53:10.858482 [info ]: Loading profiles.yml
+09:53:12.310338 [info ]: Loading profiles.yml
+09:53:13.034146 [info ]: Loading profiles.yml
+09:53:13.306815 [info ]: Loading profiles.yml
+09:53:13.819567 [info ]: Loading profiles.yml
+09:53:15.337629 [info ]: Loading profiles.yml
+09:53:15.669650 [info ]: Loading profiles.yml
+09:53:16.208857 [info ]: Loading profiles.yml
+09:53:16.708926 [info ]: Loading profiles.yml
+09:53:17.998395 [info ]: Loading profiles.yml
+09:53:18.615703 [info ]: Loading profiles.yml
+09:53:19.135078 [info ]: Loading profiles.yml
+09:53:19.818897 [info ]: Loading profiles.yml
+09:53:20.605533 [info ]: Loading profiles.yml
+09:53:20.906126 [info ]: Loading profiles.yml
+09:53:21.407011 [info ]: Loading profiles.yml
+09:53:21.938332 [info ]: Loading profiles.yml
+09:53:22.447160 [info ]: Loading profiles.yml
+09:53:24.230514 [info ]: Loading profiles.yml
+09:53:26.323693 [info ]: Loading profiles.yml
+09:53:26.708618 [info ]: Loading profiles.yml
+09:53:28.632493 [info ]: Loading profiles.yml
+09:53:29.277521 [info ]: Loading profiles.yml
+09:53:30.161914 [info ]: Loading profiles.yml
+09:53:31.240244 [info ]: Loading profiles.yml
+09:53:31.653071 [info ]: Loading profiles.yml
+09:53:32.980888 [info ]: Loading profiles.yml
+09:53:34.038179 [info ]: Loading profiles.yml
+09:53:34.405414 [info ]: Loading profiles.yml
+09:53:34.970402 [info ]: Loading profiles.yml
+09:53:35.600242 [info ]: Loading profiles.yml
+09:53:35.914292 [info ]: Loading profiles.yml
+09:53:36.389836 [info ]: Loading profiles.yml
+09:53:36.854202 [info ]: Loading profiles.yml
+09:53:38.753076 [info ]: Loading profiles.yml
+09:53:39.620046 [info ]: Loading profiles.yml
+09:53:40.545331 [info ]: Loading profiles.yml
+09:53:42.622284 [info ]: Loading profiles.yml
+09:53:44.251723 [info ]: Loading profiles.yml
+09:53:44.969666 [info ]: Loading profiles.yml
+09:53:46.087695 [info ]: Loading profiles.yml
+09:53:47.153311 [info ]: Loading profiles.yml
+09:53:47.561024 [info ]: Loading profiles.yml
+09:53:48.078769 [info ]: Loading profiles.yml
+09:53:48.581320 [info ]: Loading profiles.yml
+09:53:49.084330 [info ]: Loading profiles.yml
+09:53:49.609373 [info ]: Loading profiles.yml
+09:53:50.136803 [info ]: Loading profiles.yml
+09:53:50.668406 [info ]: Loading profiles.yml
+09:53:51.166110 [info ]: Loading profiles.yml
+09:53:51.922988 [info ]: Loading profiles.yml
+09:53:52.570657 [info ]: Loading profiles.yml
+09:53:53.357040 [info ]: Loading profiles.yml
+09:53:53.878360 [info ]: Loading profiles.yml
+09:53:54.372678 [info ]: Loading profiles.yml
+09:53:55.477093 [info ]: Loading profiles.yml
+09:53:56.433088 [info ]: Loading profiles.yml
+09:53:56.933905 [info ]: Loading profiles.yml
+09:53:57.435735 [info ]: Loading profiles.yml
+09:53:58.022896 [info ]: Loading profiles.yml
+09:53:58.808311 [info ]: Loading profiles.yml
+09:53:59.791053 [info ]: Loading profiles.yml
+09:54:00.931757 [info ]: Loading profiles.yml
+09:54:02.069260 [info ]: Loading profiles.yml
+09:58:39.646417 [info ]: Loading profiles.yml
+10:15:07.605363 [info ]: Loading profiles.yml
+10:15:08.119770 [info ]: Loading profiles.yml
+10:15:09.154651 [info ]: Loading profiles.yml
+10:15:09.671944 [info ]: Loading profiles.yml
+10:15:10.189579 [info ]: Loading profiles.yml
+10:15:10.834046 [info ]: Loading profiles.yml
+10:15:13.035759 [info ]: Loading profiles.yml
+10:15:14.276965 [info ]: Loading profiles.yml
+10:15:16.250623 [info ]: Loading profiles.yml
+10:15:17.085547 [info ]: Loading profiles.yml
+10:15:17.435952 [info ]: Loading profiles.yml
+10:15:17.938913 [info ]: Loading profiles.yml
+10:23:42.778825 [info ]: Loading profiles.yml
+10:24:36.468205 [info ]: Loading profiles.yml
+10:24:51.806743 [info ]: Loading profiles.yml
+10:24:52.811424 [info ]: Loading profiles.yml
+10:24:58.495054 [info ]: Loading profiles.yml
+10:29:59.516400 [info ]: Loading profiles.yml
+10:33:33.050973 [info ]: Loading profiles.yml
+10:33:42.986407 [info ]: Loading profiles.yml
+10:38:55.577168 [info ]: Loading profiles.yml
+10:40:17.472611 [info ]: Loading profiles.yml
+10:41:14.146701 [info ]: Loading profiles.yml
