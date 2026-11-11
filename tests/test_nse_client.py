@@ -21,6 +21,7 @@ from capmkt_data_platform.ingest.nse_client import (
     NoFileError,
     NseClient,
     build_url,
+    iter_days,
     iter_weekdays,
     read_csv_member,
     validate_zip,
@@ -299,3 +300,30 @@ def test_read_csv_member_returns_csv_bytes_and_keeps_na_text(tmp_path, sleeps):
     )
     res = client.download_day("bhavcopy_cm", TEMPLATE, FRIDAY)
     assert read_csv_member(res.path) == b"TradDt,SctySrs\n2026-11-06,NA\n"
+
+
+def test_iter_days_can_include_weekends():
+    days = list(iter_days(date(2026, 11, 6), date(2026, 11, 9), include_weekends=True))
+    assert days == [
+        date(2026, 11, 6),
+        date(2026, 11, 7),
+        date(2026, 11, 8),
+        date(2026, 11, 9),
+    ]
+
+
+def test_backfill_include_weekends_finds_special_sunday_session(tmp_path, sleeps):
+    body = make_zip()
+    sat = build_url(TEMPLATE, date(2026, 11, 7))
+    sun = build_url(TEMPLATE, date(2026, 11, 8))
+    session = FakeSession({sat: [FakeResponse(404)], sun: [FakeResponse(200, body)]})
+    client = make_client(tmp_path, session, sleeps)
+    results = client.backfill(
+        "bhavcopy_cm",
+        TEMPLATE,
+        date(2026, 11, 7),
+        date(2026, 11, 8),
+        pause=0,
+        include_weekends=True,
+    )
+    assert [r.status for r in results] == [NO_FILE, DOWNLOADED]

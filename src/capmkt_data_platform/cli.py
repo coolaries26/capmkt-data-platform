@@ -117,6 +117,13 @@ def backfill(
         float | None, typer.Option("--pause", help="Seconds between requests")
     ] = None,
     force: Annotated[bool, typer.Option("--force")] = False,
+    include_weekends: Annotated[
+        bool,
+        typer.Option(
+            "--include-weekends",
+            help="Also try Saturdays and Sundays (special sessions)",
+        ),
+    ] = False,
 ) -> None:
     """Download every weekday in a date range. Holidays show up as NO_FILE, which is fine."""
     settings = get_settings()
@@ -134,6 +141,7 @@ def backfill(
         end.date(),
         pause=settings.request_pause_seconds if pause is None else pause,
         force=force,
+        include_weekends=include_weekends,
     )
     counts = Counter(r.status for r in results)
     failed_dates = [r.trade_date.isoformat() for r in results if r.status == FAILED]

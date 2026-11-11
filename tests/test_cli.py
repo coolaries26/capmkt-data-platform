@@ -29,8 +29,8 @@ class FakeClient:
         self.calls.append((dataset, url_template, trade_date, force))
         return self.results[0]
 
-    def backfill(self, dataset, url_template, start, end, pause=1.0, force=False):
-        self.calls.append((dataset, start, end, pause, force))
+    def backfill(self, dataset, url_template, start, end, **kwargs):
+        self.calls.append((dataset, start, end, kwargs))
         return self.results
 
 
@@ -132,3 +132,21 @@ def test_backfill_exits_1_when_any_day_failed(monkeypatch):
     )
     assert res.exit_code == 1
     assert last_json(res.stdout)["failed_dates"] == ["2026-11-06"]
+
+
+def test_backfill_passes_include_weekends_flag(monkeypatch):
+    fake = use_client(monkeypatch, DOWNLOADED)
+    runner.invoke(
+        cli.app,
+        [
+            "backfill",
+            "--start",
+            "2026-11-06",
+            "--end",
+            "2026-11-09",
+            "--pause",
+            "0",
+            "--include-weekends",
+        ],
+    )
+    assert fake.calls[0][3]["include_weekends"] is True

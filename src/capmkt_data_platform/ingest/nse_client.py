@@ -79,16 +79,26 @@ def build_url(url_template: str, trade_date: date) -> str:
     return url_template.format(yyyymmdd=trade_date.strftime("%Y%m%d"))
 
 
-def iter_weekdays(start: date, end: date) -> Iterator[date]:
-    """Yield Monday to Friday dates in [start, end]. Exchange holidays still yield
-    NO_FILE results; a holiday calendar (Week 2) will remove those requests."""
+def iter_days(
+    start: date, end: date, *, include_weekends: bool = False
+) -> Iterator[date]:
+    """Yield dates in [start, end]. Weekends are skipped unless include_weekends is set.
+
+    NSE sometimes runs special weekend sessions (for example Diwali Muhurat trading),
+    so the weekday filter is only a shortcut until the trading calendar exists.
+    """
     if start > end:
         raise ValueError(f"start {start} is after end {end}")
     current = start
     while current <= end:
-        if current.weekday() < 5:
+        if include_weekends or current.weekday() < 5:
             yield current
         current += timedelta(days=1)
+
+
+def iter_weekdays(start: date, end: date) -> Iterator[date]:
+    """Monday to Friday only (kept for backwards compatibility)."""
+    return iter_days(start, end)
 
 
 def validate_zip(content: bytes) -> str:
@@ -292,9 +302,10 @@ class NseClient:
         *,
         pause: float = 1.0,
         force: bool = False,
+        include_weekends: bool = False,
     ) -> list[DownloadResult]:
         results: list[DownloadResult] = []
-        for day in iter_weekdays(start, end):
+        for day in iter_days(start, end, include_weekends=include_weekends):
             res = self.download_day(dataset, url_template, day, force=force)
             results.append(res)
             if res.status != CACHED and pause > 0:
