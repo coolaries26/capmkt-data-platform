@@ -1,5 +1,5 @@
 ==================== 2026-11-07T20:47:39.471893Z | 01a1b7c4-5336-70a2-8924-7f858783a0a2 ====================
-20:47:59.760989 [info ]: 
+20:47:59.760989 [info ]:
 ==================== Execution Summary =====================
 Finished 'internal' successfully [20.3s]
 [0m03:24:20.268850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002130FE742C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021310F32510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002130D3CD0A0>]}
@@ -67,9 +67,9 @@ There are 6 unused configuration paths:
 [0m03:27:07.166921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675DFFC20>]}
 [0m03:27:07.182591 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
 [0m03:27:07.182591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59f209a5-ba94-44c4-a491-d1cd727ebe44', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D2E330>]}
-[0m03:27:07.182591 [info ] [MainThread]: 
+[0m03:27:07.182591 [info ] [MainThread]:
 [0m03:27:07.182591 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
-[0m03:27:07.199974 [info ] [MainThread]: 
+[0m03:27:07.199974 [info ] [MainThread]:
 [0m03:27:07.203693 [debug] [MainThread]: Acquiring new postgres connection 'master'
 [0m03:27:07.234073 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
 [0m03:27:15.624084 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
@@ -97,7 +97,7 @@ select
       'materialized_view' as type
     from pg_matviews
     where schemaname ilike 'public'
-  
+
 [0m03:27:15.624084 [debug] [ThreadPool]: Opening a new connection, currently in state init
 [0m03:27:15.793055 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
 1 attempts remaining. Retrying in 0 seconds.
@@ -128,19 +128,19 @@ select
       'materialized_view' as type
     from pg_matviews
     where schemaname ilike 'public'
-  
+
 [0m03:27:15.893364 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
 [0m03:27:15.909045 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
 [0m03:27:15.911610 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
 [0m03:27:15.911610 [debug] [ThreadPool]: On list_capmkt_public: No close available on handle
 [0m03:27:15.911610 [debug] [MainThread]: Connection 'master' was properly closed.
 [0m03:27:15.911610 [debug] [MainThread]: Connection 'list_capmkt_public' was properly closed.
-[0m03:27:15.911610 [info ] [MainThread]: 
+[0m03:27:15.911610 [info ] [MainThread]:
 [0m03:27:15.911610 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 8.71 seconds (8.71s).
 [0m03:27:15.911610 [error] [MainThread]: Encountered an error:
 Database Error
   connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
-  
+
 [0m03:27:15.933363 [debug] [MainThread]: Command `dbt test` failed at 03:27:15.932123 after 20.03 seconds
 [0m03:27:15.934172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002467445CC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D2E540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024675D57FE0>]}
 [0m03:27:15.945024 [debug] [MainThread]: Flushing usage events
@@ -172,9 +172,9 @@ There are 6 unused configuration paths:
 [0m03:27:52.079103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012497B3B3B0>]}
 [0m03:27:52.079103 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
 [0m03:27:52.079103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '18f9c79e-e004-4263-9ccf-a9448c400d40', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000124938DD250>]}
-[0m03:27:52.102584 [info ] [MainThread]: 
+[0m03:27:52.102584 [info ] [MainThread]:
 [0m03:27:52.102584 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
-[0m03:27:52.102584 [info ] [MainThread]: 
+[0m03:27:52.102584 [info ] [MainThread]:
 [0m03:27:52.117244 [debug] [MainThread]: Acquiring new postgres connection 'master'
 [0m03:27:52.150302 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
 [0m03:27:52.464773 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
@@ -202,7 +202,7 @@ select
       'materialized_view' as type
     from pg_matviews
     where schemaname ilike 'public'
-  
+
 [0m03:27:52.480379 [debug] [ThreadPool]: Opening a new connection, currently in state init
 [0m03:27:52.596387 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
 1 attempts remaining. Retrying in 0 seconds.
@@ -233,19 +233,19 @@ select
       'materialized_view' as type
     from pg_matviews
     where schemaname ilike 'public'
-  
+
 [0m03:27:52.715043 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
 [0m03:27:52.718041 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_relations_without_caching
 [0m03:27:52.720049 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
 [0m03:27:52.723045 [debug] [ThreadPool]: On list_capmkt_public: No close available on handle
 [0m03:27:52.727034 [debug] [MainThread]: Connection 'master' was properly closed.
 [0m03:27:52.729046 [debug] [MainThread]: Connection 'list_capmkt_public' was properly closed.
-[0m03:27:52.731130 [info ] [MainThread]: 
+[0m03:27:52.731130 [info ] [MainThread]:
 [0m03:27:52.734160 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.62 seconds (0.62s).
 [0m03:27:52.734160 [error] [MainThread]: Encountered an error:
 Database Error
   connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "capmkt"
-  
+
 [0m03:27:52.741698 [debug] [MainThread]: Command `dbt test` failed at 03:27:52.734160 after 4.41 seconds
 [0m03:27:52.743690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249208D610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012495F3EA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001249773D070>]}
 [0m03:27:52.745719 [debug] [MainThread]: Flushing usage events
@@ -277,9 +277,9 @@ There are 6 unused configuration paths:
 [0m03:28:35.280990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000248234EF110>]}
 [0m03:28:35.280990 [info ] [MainThread]: Found 2 models, 4 data tests, 479 macros
 [0m03:28:35.280990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2fefc4c7-3c4d-47d6-8b23-3e9e1e160a5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820E365A0>]}
-[0m03:28:35.296682 [info ] [MainThread]: 
+[0m03:28:35.296682 [info ] [MainThread]:
 [0m03:28:35.296682 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
-[0m03:28:35.314816 [info ] [MainThread]: 
+[0m03:28:35.314816 [info ] [MainThread]:
 [0m03:28:35.325139 [debug] [MainThread]: Acquiring new postgres connection 'master'
 [0m03:28:35.348906 [debug] [ThreadPool]: Acquiring new postgres connection 'list_capmkt_public'
 [0m03:28:35.693345 [debug] [ThreadPool]: Using postgres connection "list_capmkt_public"
@@ -307,7 +307,7 @@ select
       'materialized_view' as type
     from pg_matviews
     where schemaname ilike 'public'
-  
+
 [0m03:28:35.708960 [debug] [ThreadPool]: Opening a new connection, currently in state init
 [0m03:28:36.035004 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.324 seconds
 [0m03:28:36.039978 [debug] [ThreadPool]: On list_capmkt_public: ROLLBACK
@@ -387,17 +387,17 @@ select distinct
 [0m03:28:36.679622 [debug] [Thread-2 (]: Using postgres connection "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"
 [0m03:28:36.679622 [debug] [Thread-2 (]: On test.capmkt.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.not_null_my_second_dbt_model_id.151b76d778"} */
 
-    
+
     select
       count(*) as failures,
       count(*) != 0 as should_warn,
       count(*) != 0 as should_error
     from (
-      
-    
-  
-    
-    
+
+
+
+
+
 
 
 
@@ -407,9 +407,9 @@ where id is null
 
 
 
-  
-  
-      
+
+
+
     ) dbt_internal_test
 [0m03:28:36.679622 [debug] [Thread-1 (]: Using postgres connection "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"
 [0m03:28:36.695285 [debug] [Thread-4 (]: Using postgres connection "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"
@@ -417,17 +417,17 @@ where id is null
 [0m03:28:36.695285 [debug] [Thread-3 (]: Using postgres connection "test.capmkt.unique_my_first_dbt_model_id.16e066b321"
 [0m03:28:36.695285 [debug] [Thread-1 (]: On test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710"} */
 
-    
+
     select
       count(*) as failures,
       count(*) != 0 as should_warn,
       count(*) != 0 as should_error
     from (
-      
-    
-  
-    
-    
+
+
+
+
+
 
 
 
@@ -437,23 +437,23 @@ where id is null
 
 
 
-  
-  
-      
+
+
+
     ) dbt_internal_test
 [0m03:28:36.695285 [debug] [Thread-4 (]: On test.capmkt.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.unique_my_second_dbt_model_id.57a0f8c493"} */
 
-    
+
     select
       count(*) as failures,
       count(*) != 0 as should_warn,
       count(*) != 0 as should_error
     from (
-      
-    
-  
-    
-    
+
+
+
+
+
 
 select
     id as unique_field,
@@ -466,23 +466,23 @@ having count(*) > 1
 
 
 
-  
-  
-      
+
+
+
     ) dbt_internal_test
 [0m03:28:36.695285 [debug] [Thread-3 (]: On test.capmkt.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.11.17", "profile_name": "capmkt", "target_name": "dev", "node_id": "test.capmkt.unique_my_first_dbt_model_id.16e066b321"} */
 
-    
+
     select
       count(*) as failures,
       count(*) != 0 as should_warn,
       count(*) != 0 as should_error
     from (
-      
-    
-  
-    
-    
+
+
+
+
+
 
 select
     id as unique_field,
@@ -495,9 +495,9 @@ having count(*) > 1
 
 
 
-  
-  
-      
+
+
+
     ) dbt_internal_test
 [0m03:28:36.710871 [debug] [Thread-1 (]: Opening a new connection, currently in state init
 [0m03:28:36.710871 [debug] [Thread-4 (]: Opening a new connection, currently in state init
@@ -586,51 +586,51 @@ LINE 19: from "capmkt"."public"."my_second_dbt_model"
 [0m03:28:37.364478 [debug] [MainThread]: Connection 'test.capmkt.not_null_my_first_dbt_model_id.5fb22c2710' was properly closed.
 [0m03:28:37.372095 [debug] [MainThread]: Connection 'test.capmkt.unique_my_first_dbt_model_id.16e066b321' was properly closed.
 [0m03:28:37.374220 [debug] [MainThread]: Connection 'test.capmkt.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
-[0m03:28:37.374220 [info ] [MainThread]: 
+[0m03:28:37.374220 [info ] [MainThread]:
 [0m03:28:37.387189 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 2.06 seconds (2.06s).
 [0m03:28:37.395190 [debug] [MainThread]: Command end result
 [0m03:28:37.818214 [debug] [MainThread]: Wrote artifact WritableManifest to C:\alsgit\capmkt_data_platform\capmkt\target\manifest.json
 [0m03:28:37.833855 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\alsgit\capmkt_data_platform\capmkt\target\semantic_manifest.json
 [0m03:28:37.880711 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\alsgit\capmkt_data_platform\capmkt\target\run_results.json
-[0m03:28:37.880711 [info ] [MainThread]: 
+[0m03:28:37.880711 [info ] [MainThread]:
 [0m03:28:37.880711 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
-[0m03:28:37.880711 [info ] [MainThread]: 
+[0m03:28:37.880711 [info ] [MainThread]:
 [0m03:28:37.893774 [error] [MainThread]: [31mFailure in test unique_my_second_dbt_model_id (models\example\schema.yml)[0m
 [0m03:28:37.899702 [error] [MainThread]:   Database Error in test unique_my_second_dbt_model_id (models\example\schema.yml)
   relation "public.my_second_dbt_model" does not exist
   LINE 19: from "capmkt"."public"."my_second_dbt_model"
                 ^
   compiled code at target\run\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql
-[0m03:28:37.912152 [info ] [MainThread]: 
+[0m03:28:37.912152 [info ] [MainThread]:
 [0m03:28:37.916128 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\unique_my_second_dbt_model_id.sql
-[0m03:28:37.932200 [info ] [MainThread]: 
+[0m03:28:37.932200 [info ] [MainThread]:
 [0m03:28:37.932200 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models\example\schema.yml)[0m
 [0m03:28:37.949685 [error] [MainThread]:   Database Error in test not_null_my_first_dbt_model_id (models\example\schema.yml)
   relation "public.my_first_dbt_model" does not exist
   LINE 18: from "capmkt"."public"."my_first_dbt_model"
                 ^
   compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
-[0m03:28:37.966211 [info ] [MainThread]: 
+[0m03:28:37.966211 [info ] [MainThread]:
 [0m03:28:37.974597 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\not_null_my_first_dbt_model_id.sql
-[0m03:28:37.977590 [info ] [MainThread]: 
+[0m03:28:37.977590 [info ] [MainThread]:
 [0m03:28:37.982326 [error] [MainThread]: [31mFailure in test unique_my_first_dbt_model_id (models\example\schema.yml)[0m
 [0m03:28:37.990512 [error] [MainThread]:   Database Error in test unique_my_first_dbt_model_id (models\example\schema.yml)
   relation "public.my_first_dbt_model" does not exist
   LINE 19: from "capmkt"."public"."my_first_dbt_model"
                 ^
   compiled code at target\run\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql
-[0m03:28:37.994437 [info ] [MainThread]: 
+[0m03:28:37.994437 [info ] [MainThread]:
 [0m03:28:37.998694 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\unique_my_first_dbt_model_id.sql
-[0m03:28:38.002730 [info ] [MainThread]: 
+[0m03:28:38.002730 [info ] [MainThread]:
 [0m03:28:38.011241 [error] [MainThread]: [31mFailure in test not_null_my_second_dbt_model_id (models\example\schema.yml)[0m
 [0m03:28:38.015394 [error] [MainThread]:   Database Error in test not_null_my_second_dbt_model_id (models\example\schema.yml)
   relation "public.my_second_dbt_model" does not exist
   LINE 18: from "capmkt"."public"."my_second_dbt_model"
                 ^
   compiled code at target\run\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql
-[0m03:28:38.015394 [info ] [MainThread]: 
+[0m03:28:38.015394 [info ] [MainThread]:
 [0m03:28:38.026924 [info ] [MainThread]:   compiled code at target\compiled\capmkt\models\example\schema.yml\not_null_my_second_dbt_model_id.sql
-[0m03:28:38.030031 [info ] [MainThread]: 
+[0m03:28:38.030031 [info ] [MainThread]:
 [0m03:28:38.041092 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=4
 [0m03:28:38.048809 [debug] [MainThread]: Command `dbt test` failed at 03:28:38.045390 after 6.59 seconds
 [0m03:28:38.048809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024821781D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820DB0D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024820DB13A0>]}
@@ -673,7 +673,7 @@ There are 6 unused configuration paths:
 [0m03:29:42.764803 [debug] [MainThread]: Flushing usage events
 [0m03:29:45.104257 [debug] [MainThread]: An error was encountered while trying to flush usage events
 ==================== 2026-11-09T10:48:22.166539Z | 01a1bfec-60d3-7821-9053-fb57e97db70f ====================
-10:48:43.616443 [info ]: 
+10:48:43.616443 [info ]:
 ==================== Execution Summary =====================
 Finished 'internal' successfully [21.4s]
 [0m16:21:02.724378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2A24B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2952D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEF2A89910>]}
@@ -755,7 +755,7 @@ The database returned the following error:
   connection to server at "local" (185.38.109.202), port 5432 failed: timeout expired
   connection to server at "local" (185.38.109.201), port 5432 failed: timeout expired
   connection to server at "local" (185.38.109.200), port 5432 failed: timeout expired
-  
+
 
 Check your database credentials and try again. For more information, visit:
 https://docs.getdbt.com/docs/configure-your-profile
