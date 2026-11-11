@@ -9,6 +9,7 @@ datasets:
       - {source: TradDt,       target: trade_date,         type: date,    in_staging: true, transform: ""}
       - {source: BizDt,        target: business_date,      type: date,    in_staging: true, transform: ""}
       - {source: Sgmt,         target: segment,            type: text,    in_staging: true, transform: ""}
+      - {source: Src,          target: Source,             type: text,    in_staging: true, transform: ""}
       - {source: FinInstrmTp,  target: instrument_type,    type: text,    in_staging: true, transform: ""}
       - {source: FinInstrmId,  target: instrument_id,      type: text,    in_staging: true, transform: ""}
       - {source: ISIN,         target: isin,               type: text,    in_staging: true, transform: ""}
@@ -21,9 +22,27 @@ datasets:
       - {source: ClsPric,      target: close_price,        type: numeric, in_staging: true, transform: ""}
       - {source: LastPric,     target: last_price,         type: numeric, in_staging: true, transform: ""}
       - {source: PrvsClsgPric, target: prev_close_price,   type: numeric, in_staging: true, transform: ""}
+      - {source: SttlmPric,    target: settlement_price,   type: numeric, in_staging: true, transform: ""}
       - {source: TtlTradgVol,  target: total_traded_qty,   type: bigint,  in_staging: true, transform: ""}
       - {source: TtlTrfVal,    target: total_traded_value, type: numeric, in_staging: true, transform: ""}
       - {source: TtlNbOfTxsExctd, target: total_trades,    type: bigint,  in_staging: true, transform: ""}
+      - {source: SsnId,        target: session_id,         type: text,    in_staging: true, transform: ""}
+      - {source: Rmks,         target: remarks,            type: text,    in_staging: true, transform: ""}
+    # Source columns we deliberately do NOT load. Verified empty for equity rows
+    # on 2026-11-06 (they apply to derivatives or are reserved).
+    ignored_columns:
+      - XpryDt
+      - FininstrmActlXpryDt
+      - StrkPric
+      - OptnTp
+      - UndrlygPric
+      - OpnIntrst
+      - ChngInOpnIntrst
+      - NewBrdLotQty
+      - Rsvd1
+      - Rsvd2
+      - Rsvd3
+      - Rsvd4
     dq_rules:
       - {name: high_ge_low,        expr: "high_price >= low_price",                         severity: error}
       - {name: close_within_range, expr: "close_price between low_price and high_price",    severity: error}
