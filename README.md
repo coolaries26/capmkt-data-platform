@@ -723,9 +723,9 @@ from airflow.providers.standard.operators.bash import BashOperator
 
 PROJECT = "/home/<linux-user>/projects/capmkt-data-platform"
 ENV = f"cd {PROJECT} && set -a && source .env && set +a && "
-PY  = f"{PROJECT}/.venv/bin/python"
+PY = f"{PROJECT}/.venv/bin/python"
 DBT = f"{PROJECT}/.venv/bin/dbt"
-DS  = "{{ ds }}"
+DS = "{{ ds }}"
 
 with DAG(
     dag_id="capmkt_daily",
@@ -736,17 +736,26 @@ with DAG(
     default_args={"retries": 3, "retry_delay": timedelta(minutes=15)},
     tags=["capmkt"],
 ) as dag:
-    # exit code 99 = "not a trading day" → BashOperator marks the task skipped, downstream skipped
-    is_trading_day = BashOperator(task_id="is_trading_day",
-        bash_command=ENV + f"{PY} -m capmkt.cli is-trading-day --date {DS}")
-    ingest = BashOperator(task_id="ingest_bhavcopy",
-        bash_command=ENV + f"{PY} -m capmkt.cli ingest --dataset bhavcopy_cm --date {DS}")
-    snapshot = BashOperator(task_id="dbt_snapshot",
-        bash_command=ENV + f"{DBT} snapshot --project-dir dbt")
-    build = BashOperator(task_id="dbt_build",
-        bash_command=ENV + f"{DBT} build --project-dir dbt")
-    dq = BashOperator(task_id="dq_summary",
-        bash_command=ENV + f"{PY} -m capmkt.cli dq-summary --date {DS}")
+ # exit code 99 = "not a trading day" → BashOperator marks the task skipped, downstream skipped
+ is_trading_day = BashOperator(
+     task_id="is_trading_day",
+     bash_command=ENV + f"{PY} -m capmkt.cli is-trading-day --date {DS}",
+ )
+ ingest = BashOperator(
+     task_id="ingest_bhavcopy",
+     bash_command=ENV
+     + f"{PY} -m capmkt.cli ingest --dataset bhavcopy_cm --date {DS}",
+ )
+ snapshot = BashOperator(
+     task_id="dbt_snapshot", bash_command=ENV + f"{DBT} snapshot --project-dir dbt"
+ )
+ build = BashOperator(
+     task_id="dbt_build", bash_command=ENV + f"{DBT} build --project-dir dbt"
+ )
+ dq = BashOperator(
+     task_id="dq_summary",
+     bash_command=ENV + f"{PY} -m capmkt.cli dq-summary --date {DS}",
+ )
 
     is_trading_day >> ingest >> snapshot >> build >> dq
 ```

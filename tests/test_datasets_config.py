@@ -4,12 +4,42 @@ import yaml
 
 from capmkt_data_platform.settings import PROJECT_ROOT
 
-HEADER = (
-    "TradDt,BizDt,Sgmt,Src,FinInstrmTp,FinInstrmId,ISIN,TckrSymb,SctySrs,XpryDt,"
-    "FininstrmActlXpryDt,StrkPric,OptnTp,FinInstrmNm,OpnPric,HghPric,LwPric,ClsPric,"
-    "LastPric,PrvsClsgPric,UndrlygPric,SttlmPric,OpnIntrst,ChngInOpnIntrst,TtlTradgVol,"
-    "TtlTrfVal,TtlNbOfTxsExctd,SsnId,NewBrdLotQty,Rmks,Rsvd1,Rsvd2,Rsvd3,Rsvd4"
-).split(",")
+HEADER = [
+    "TradDt",
+    "BizDt",
+    "Sgmt",
+    "Src",
+    "FinInstrmTp",
+    "FinInstrmId",
+    "ISIN",
+    "TckrSymb",
+    "SctySrs",
+    "XpryDt",
+    "FininstrmActlXpryDt",
+    "StrkPric",
+    "OptnTp",
+    "FinInstrmNm",
+    "OpnPric",
+    "HghPric",
+    "LwPric",
+    "ClsPric",
+    "LastPric",
+    "PrvsClsgPric",
+    "UndrlygPric",
+    "SttlmPric",
+    "OpnIntrst",
+    "ChngInOpnIntrst",
+    "TtlTradgVol",
+    "TtlTrfVal",
+    "TtlNbOfTxsExctd",
+    "SsnId",
+    "NewBrdLotQty",
+    "Rmks",
+    "Rsvd1",
+    "Rsvd2",
+    "Rsvd3",
+    "Rsvd4",
+]
 
 
 def load_cfg() -> dict:
