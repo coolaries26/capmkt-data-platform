@@ -17,6 +17,6 @@ git log --oneline -10
 echo " ---- Database ---- "
 psql -h localhost -U capmkt -d capmkt -c "\dn"                  # 10 schemas
 psql -h localhost -U capmkt -d capmkt -c "\d+ raw.bhavcopy_cm"  # partitions, indexes, triggers
-psql -h localhost -U capmkt -d capmkt -c "\dt audit.*" 
-psql -h localhost -U capmkt -d capmkt -c "\dt ref.*" 
-psql -h localhost -U capmkt -d capmkt -c "\dt raw.*" 
+psql -h localhost -U capmkt -d capmkt -c "\dt audit.*"
+psql -h localhost -U capmkt -d capmkt -c "\dt ref.*"
+psql -h localhost -U capmkt -d capmkt -c "\dt raw.*"
