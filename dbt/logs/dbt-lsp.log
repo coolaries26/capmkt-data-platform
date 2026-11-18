@@ -461,3 +461,20 @@ Finished 'compile' with 1 error [7ms]
 10:38:55.577168 [info ]: Loading profiles.yml
 10:40:17.472611 [info ]: Loading profiles.yml
 10:41:14.146701 [info ]: Loading profiles.yml
+==================== 2026-11-18T18:57:49.584374Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-11-18T18:57:49.596369Z | f78f641e-fe97-40f0-8427-af8ebadef2ab ====================
+18:57:49.600113 [info ]: Starting dbt LSP server
+18:57:49.603941 [info ]: Connecting to LSP client on port 8000
+18:57:49.619009 [info ]: Successfully connected to LSP client
+18:57:49.619880 [info ]: Creating LSP service...
+18:57:49.648650 [info ]: Creating LSP server...
+18:57:49.648717 [info ]: Starting LSP server...
+19:01:03.573049 [info ]: Loading profiles.yml
+19:01:04.614768 [info ]: Loading profiles.yml
+19:01:11.105858 [info ]: Loading profiles.yml
+19:02:05.563313 [info ]: Loading profiles.yml
+19:02:15.314877 [info ]: Loading profiles.yml
+19:02:49.829975 [info ]: Loading profiles.yml
+19:03:00.246891 [info ]: Loading profiles.yml
+19:05:10.898728 [info ]: Loading profiles.yml
+19:06:00.418447 [info ]: Loading profiles.yml

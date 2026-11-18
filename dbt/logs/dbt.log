@@ -1356,3 +1356,11 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m01:54:12.294608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CFAAB565D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CFA509E810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CFA509E490>]}
 [0m01:54:12.294608 [debug] [MainThread]: Flushing usage events
 [0m01:54:13.529957 [debug] [MainThread]: An error was encountered while trying to flush usage events
+==================== 2026-11-18T10:01:04.400145Z | 01a1ee1a-502f-75f1-be67-be1f2a864d2e ====================
+10:01:58.572914 [info ]:
+==================== Execution Summary =====================
+Finished 'internal' successfully [54.2s]
+==================== 2026-11-18T18:57:34.589810Z | 01a1f005-7f18-79e2-9b32-e0f195502cd0 ====================
+18:57:55.012991 [info ]:
+==================== Execution Summary =====================
+Finished 'internal' successfully [20.4s]

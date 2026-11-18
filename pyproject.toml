@@ -7,7 +7,10 @@ authors = [
     { name = "Alok Srivastava", email = "coolaries26@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "secretstr>=0.1.0",
+    "spray>=0.4",
+]
 
 [project.scripts]
 capmkt-data-platform = "capmkt_data_platform:main"
@@ -18,3 +21,6 @@ build-backend = "uv_build"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+]

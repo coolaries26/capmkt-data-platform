@@ -29,7 +29,10 @@ from capmkt_data_platform.ingest.nse_client import (
     FAILED,
     NO_FILE,
     NseClient,
+    NseError,
+    read_csv_member,
 )
+from capmkt_data_platform.ingest.parser import ParseError, parse_bhavcopy
 from capmkt_data_platform.logging_config import configure_logging
 from capmkt_data_platform.metadata import MetadataError, load_dataset
 from capmkt_data_platform.settings import Settings, get_settings
@@ -67,6 +70,24 @@ def main(
     ] = None,
 ) -> None:
     configure_logging(log_level, log_file)
+
+
+@app.command()
+@app.command()
+def parse(
+    zip_file: Annotated[Path, typer.Argument(help="Landed bhavcopy zip")],
+    trade_date: Annotated[datetime, typer.Option("--date", formats=[DATE_FORMAT])],
+    dataset: Annotated[str, typer.Option("--dataset")] = "bhavcopy_cm",
+) -> None:
+    """Validate a landed file and print row counts. Writes nothing."""
+    settings = get_settings()
+    try:
+        cfg = load_dataset(settings.datasets_file, dataset)
+        parsed = parse_bhavcopy(read_csv_member(zip_file), cfg, trade_date.date())
+    except (MetadataError, ParseError, NseError) as exc:
+        log.error("%s", exc)
+        raise typer.Exit(EXIT_FAILED) from exc
+    _emit({"columns": len(parsed.columns), "rows": parsed.row_count})
 
 
 @app.command()
