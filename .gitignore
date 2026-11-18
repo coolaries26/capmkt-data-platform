@@ -11,6 +11,25 @@ wheels/
 .pytest_cache/
 .ruff_cache/
 
+# Secrets and local config
+.env
+
+# Data and logs
+data/
+logs/
+*.zip
+*.parquet
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/.user.yml
+=======
+# Virtual environments
+.venv
+dbt/.user.yml
+
 <<<<<<< Updated upstream
 # Secrets and local config
 .env
