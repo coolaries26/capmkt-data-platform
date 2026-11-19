@@ -9,7 +9,7 @@ datasets:
       - {source: TradDt,       target: trade_date,         type: date,    in_staging: true, transform: ""}
       - {source: BizDt,        target: business_date,      type: date,    in_staging: true, transform: ""}
       - {source: Sgmt,         target: segment,            type: text,    in_staging: true, transform: ""}
-      - {source: Src,          target: Source,             type: text,    in_staging: true, transform: ""}
+      - {source: Src,          target: 'Source',             type: text,    in_staging: true, transform: ""}
       - {source: FinInstrmTp,  target: instrument_type,    type: text,    in_staging: true, transform: ""}
       - {source: FinInstrmId,  target: instrument_id,      type: text,    in_staging: true, transform: ""}
       - {source: ISIN,         target: isin,               type: text,    in_staging: true, transform: ""}
