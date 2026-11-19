@@ -31,7 +31,7 @@
 21:01:01.580609 [info ]: Loading ~/.dbt/profiles.yml
 21:01:01.582289 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
 21:01:01.582374 [info ]: Finished loading project [  0.01s]
-21:01:01.582792 [info ]: 
+21:01:01.582792 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [6ms]
 ==================== 2026-11-07T21:02:20.788974Z | 20030554-4484-44b8-882c-d37d570417a0 ====================
@@ -40,7 +40,7 @@ Finished 'compile' with 1 error [6ms]
 21:02:20.795362 [info ]: Finished loading project [  0.01s]
 21:02:20.795716 [error]: [IoError (dbt1001)]: Profile 'capmkt' not found in profiles.yml
   --> dbt_project.yml:3:10
-21:02:20.796592 [info ]: 
+21:02:20.796592 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [7ms]
 21:02:21.561603 [info ]: Loading profiles.yml
@@ -51,7 +51,7 @@ Finished 'compile' with 1 error [7ms]
 21:03:54.227575 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:03:54.229409 [info ]: Finished loading project [  0.01s]
-21:03:54.229514 [info ]: 
+21:03:54.229514 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [8ms]
 21:05:26.912946 [info ]: Loading profiles.yml
@@ -84,7 +84,7 @@ Finished 'compile' with 1 error [8ms]
 21:46:24.328232 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:46:24.328312 [info ]: Finished loading project [  0.01s]
-21:46:24.328417 [info ]: 
+21:46:24.328417 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [5ms]
 21:46:38.998063 [info ]: Loading profiles.yml
@@ -94,7 +94,7 @@ Finished 'compile' with 1 error [5ms]
 21:47:12.721968 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:47:12.722050 [info ]: Finished loading project [  0.00s]
-21:47:12.722117 [info ]: 
+21:47:12.722117 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:47:15.273814 [debug]: Ignoring unsupported LSP notification
@@ -106,7 +106,7 @@ Finished 'compile' with 1 error [3ms]
 21:48:18.718597 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:48:18.718665 [info ]: Finished loading project [  0.00s]
-21:48:18.718752 [info ]: 
+21:48:18.718752 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:48:19.424997Z | 0a7225b9-8ead-48a5-a3f8-1885295310be ====================
@@ -115,7 +115,7 @@ Finished 'compile' with 1 error [3ms]
 21:48:19.428607 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:48:19.428691 [info ]: Finished loading project [  0.00s]
-21:48:19.428749 [info ]: 
+21:48:19.428749 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:48:54.869902Z | 0f5277b8-ecdb-47cc-8bff-8e054bfc2349 ====================
@@ -124,7 +124,7 @@ Finished 'compile' with 1 error [3ms]
 21:48:54.872803 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:48:54.872889 [info ]: Finished loading project [  0.00s]
-21:48:54.872948 [info ]: 
+21:48:54.872948 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:48:57.602249 [info ]: Loading profiles.yml
@@ -135,7 +135,7 @@ Finished 'compile' with 1 error [3ms]
 21:50:17.008732 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:50:17.008818 [info ]: Finished loading project [  0.00s]
-21:50:17.008880 [info ]: 
+21:50:17.008880 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:51:28.018302 [debug]: Ignoring unsupported LSP notification
@@ -145,7 +145,7 @@ Finished 'compile' with 1 error [3ms]
 21:51:38.919008 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:51:38.919162 [info ]: Finished loading project [  0.01s]
-21:51:38.919343 [info ]: 
+21:51:38.919343 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [10ms]
 ==================== 2026-11-07T21:52:13.706156Z | 1c083109-f4a6-44fa-a6fd-070de3abd183 ====================
@@ -154,7 +154,7 @@ Finished 'compile' with 1 error [10ms]
 21:52:13.709053 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:52:13.709133 [info ]: Finished loading project [  0.00s]
-21:52:13.709202 [info ]: 
+21:52:13.709202 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:52:14.173268Z | 03d7fe20-4868-4f71-88ff-52ba769a1e8f ====================
@@ -163,7 +163,7 @@ Finished 'compile' with 1 error [3ms]
 21:52:14.176163 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:52:14.176246 [info ]: Finished loading project [  0.00s]
-21:52:14.176337 [info ]: 
+21:52:14.176337 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:53:18.907787Z | 1da18954-aa36-430d-b6c7-1ffa8cd153f1 ====================
@@ -172,7 +172,7 @@ Finished 'compile' with 1 error [3ms]
 21:53:18.911171 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGUSER' not found
 (in :1:1)
 21:53:18.911251 [info ]: Finished loading project [  0.00s]
-21:53:18.911327 [info ]: 
+21:53:18.911327 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:53:34.165938 [info ]: Loading profiles.yml
@@ -186,7 +186,7 @@ Finished 'compile' with 1 error [3ms]
 21:55:23.174010 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
 (in :1:1)
 21:55:23.174080 [info ]: Finished loading project [  0.00s]
-21:55:23.174168 [info ]: 
+21:55:23.174168 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:55:52.384743Z | b2e75d67-55fa-4024-beb7-8ab2339b240f ====================
@@ -195,7 +195,7 @@ Finished 'compile' with 1 error [3ms]
 21:55:52.387906 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
 (in :1:1)
 21:55:52.387985 [info ]: Finished loading project [  0.00s]
-21:55:52.388051 [info ]: 
+21:55:52.388051 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:56:38.533553 [debug]: Ignoring unsupported LSP notification
@@ -205,7 +205,7 @@ Finished 'compile' with 1 error [3ms]
 21:56:42.177009 [error]: [InvalidConfig (dbt1005)]: Jinja render error: invalid operation: 'env_var': environment variable 'PGPASSWORD' not found
 (in :1:1)
 21:56:42.177082 [info ]: Finished loading project [  0.00s]
-21:56:42.177182 [info ]: 
+21:56:42.177182 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 21:57:07.023199 [info ]: Loading profiles.yml
@@ -216,7 +216,7 @@ Finished 'compile' with 1 error [3ms]
 21:57:34.857274 [info ]: Loading profiles.yml
 21:57:34.858494 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
 21:57:34.858566 [info ]: Finished loading project [  0.00s]
-21:57:34.858651 [info ]: 
+21:57:34.858651 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [3ms]
 ==================== 2026-11-07T21:58:17.777998Z | ff3d7499-5812-4629-a2ec-a3c36bdb6762 ====================
@@ -224,7 +224,7 @@ Finished 'compile' with 1 error [3ms]
 21:58:17.782742 [info ]: Loading profiles.yml
 21:58:17.785302 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
 21:58:17.785835 [info ]: Finished loading project [  0.01s]
-21:58:17.785907 [info ]: 
+21:58:17.785907 [info ]:
 ==================== Execution Summary =====================
 Finished 'compile' with 1 error [7ms]
 21:58:37.253056 [info ]: Loading profiles.yml
