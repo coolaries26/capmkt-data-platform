@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from pydantic import field_validator
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # src/capmkt_data_platform/settings.py -> parents[2] is the repository root
@@ -31,6 +31,12 @@ class Settings(BaseSettings):
     http_max_attempts: int = 3
     http_backoff_seconds: float = 2.0
     request_pause_seconds: float = 1.0  # polite delay between downloads in backfill
+    # PostgreSQL (same variable names as dbt and psql use)
+    pghost: str = "localhost"
+    pgport: int = 5432
+    pgdatabase: str = "capmkt"
+    pguser: str = "capmkt"
+    pgpassword: SecretStr | None = None
 
     @field_validator("data_dir", "datasets_file")
     @classmethod
