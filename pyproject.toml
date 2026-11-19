@@ -23,4 +23,5 @@ build-backend = "uv_build"
 testpaths = ["tests"]
 markers = [
     "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "integration: needs the PostgreSQL test database (capmkt_test)",
 ]

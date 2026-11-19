@@ -21,8 +21,16 @@ from datetime import datetime
 from pathlib import Path
 from typing import Annotated
 
+import psycopg
 import typer
 
+from capmkt_data_platform.db import connect
+from capmkt_data_platform.ingest.loader import (
+    SUCCESS,
+    load_day,
+    record_download_failure,
+    record_no_file,
+)
 from capmkt_data_platform.ingest.nse_client import (
     CACHED,
     DOWNLOADED,
@@ -72,7 +80,6 @@ def main(
     configure_logging(log_level, log_file)
 
 
-@app.command()
 @app.command()
 def parse(
     zip_file: Annotated[Path, typer.Argument(help="Landed bhavcopy zip")],
@@ -168,6 +175,65 @@ def backfill(
     failed_dates = [r.trade_date.isoformat() for r in results if r.status == FAILED]
     _emit({"dataset": dataset, "counts": dict(counts), "failed_dates": failed_dates})
     raise typer.Exit(EXIT_FAILED if failed_dates else EXIT_OK)
+
+
+@app.command()
+def ingest(
+    trade_date: Annotated[
+        datetime, typer.Option("--date", formats=[DATE_FORMAT], help="YYYY-MM-DD")
+    ],
+    dataset: Annotated[str, typer.Option("--dataset")] = "bhavcopy_cm",
+    force: Annotated[
+        bool, typer.Option("--force", help="Re-download even if a file exists")
+    ] = False,
+    fail_on_missing: Annotated[
+        bool,
+        typer.Option(
+            "--fail-on-missing",
+            help="Exit 1 (retry) instead of 99 (skip) when the file is missing.",
+        ),
+    ] = False,
+) -> None:
+    """Download one day's file (if needed) and load it into the raw table."""
+    settings = get_settings()
+    try:
+        cfg = load_dataset(settings.datasets_file, dataset)
+    except MetadataError as exc:
+        log.error("%s", exc)
+        raise typer.Exit(EXIT_FAILED) from exc
+
+    download = build_client(settings).download_day(
+        dataset, cfg["url_template"], trade_date.date(), force=force
+    )
+
+    audit_conn = data_conn = None
+    try:
+        audit_conn = connect(settings, autocommit=True)
+        if download.status == NO_FILE:
+            load = record_no_file(audit_conn, dataset, download)
+        elif download.status == FAILED:
+            load = record_download_failure(audit_conn, dataset, download)
+        else:  # DOWNLOADED or CACHED
+            data_conn = connect(settings)
+            load = load_day(audit_conn, data_conn, dataset, cfg, download)
+    except (
+        psycopg.Error,
+        RuntimeError,
+    ) as exc:  # database unreachable, or no PGPASSWORD
+        log.error("database error: %s", exc)
+        _emit({"download": download.to_dict(), "load": None, "error": str(exc)})
+        raise typer.Exit(EXIT_FAILED) from exc
+    finally:
+        for conn in (data_conn, audit_conn):
+            if conn is not None:
+                conn.close()
+
+    _emit({"download": download.to_dict(), "load": load.to_dict()})
+    if load.status == SUCCESS:
+        raise typer.Exit(EXIT_OK)
+    if download.status == NO_FILE:
+        raise typer.Exit(EXIT_FAILED if fail_on_missing else EXIT_NO_FILE)
+    raise typer.Exit(EXIT_FAILED)
 
 
 if __name__ == "__main__":
