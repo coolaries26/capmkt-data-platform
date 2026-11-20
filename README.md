@@ -469,10 +469,19 @@ written, the PR is merged, and `main` is pulled.
 
 ## 10. Progress tracker
 
+| Day | Date | Status | PR | Notes |
+|---|---|---|---|---|
+| D1 | 9 Nov | Done | cabcbdf| WSL and tooling|
+| D2 | 10 Nov | Done | 2796deb| uv project scaffold|
+| D3 | 11 Nov | Done | d2d6778| PostgreSQL and DDL|
+| D4 | 12 Nov | Done | 279e871| Download and inspect|
+| D5 | 13 Nov | Done | 21da754| Parser and loader|
+| D6 to D20 | | In Progress | l01|install docker on wsl |
+
 | Phase | Window | Status | Tag | Notes |
 | ----- | ------ | ------ | --- | ----- |
-| 0 Hygiene | 18 Nov | not started | | |
-| 1 Containers and Kubernetes | 19 Nov to 2 Dec | not started | v0.2.0 | v0.1.0 at lab day 5 |
+| 0 Hygiene | 18 Nov | Done |  | installed docker on WSL |
+| 1 Containers and Kubernetes | 19 Nov to 2 Dec | Started | v0.2.0 | v0.1.0 at lab day 5 |
 | 2 Core pipeline | 3 to 16 Dec | not started | v0.3.0 | |
 | 3 AWS | 17 to 30 Dec | not started | v0.4.0 | |
 | 4 Snowflake | 31 Dec to 13 Jan | not started | v0.5.0 | |
