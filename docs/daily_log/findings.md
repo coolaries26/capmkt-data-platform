@@ -46,3 +46,13 @@ It returned a file, as there was a special session on that day, it confirms the 
 - 10 Nov: a holiday (404).
 - 8 Nov (Sunday): a file exists, so special sessions are real. Write down the file’s row count and compare it with a normal day. A Muhurat session should look smaller in traded value. Run the profiler again after downloading it.
 - The NA series and blank/zero/ISIN findings. by `scripts/profile_landing.py`
+## Nov, 19
+# Day LNN: install Docker engin and postgresql image
+Done:Install Docker Engine in WSL and postgresql server
+Blocked / not done: NA
+Commands worth remembering:
+- `docker rm -f xxxx` can delete the running container as well
+
+What broke and how I found out:
+One thing I can now explain:
+Tomorrow:
