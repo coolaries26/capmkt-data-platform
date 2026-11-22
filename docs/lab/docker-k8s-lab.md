@@ -150,8 +150,21 @@ services:
     restart: unless-stopped
 
 volumes:
-  pgdata:
+  pgdata: {}
 ```
+
+**Indentation matters.** `name:`, `services:` and `volumes:` are three top-level keys and must start in
+column 0. `postgres:` is indented 2 spaces under `services:`, and `pgdata:` is indented 2 spaces under `volumes:`.
+If `volumes:` is indented, Compose reads it as a service and fails with
+`services.volumes.pgdata false schema`. Use spaces, never tabs. Always validate before running:
+
+```bash
+docker compose config --quiet && echo "compose file OK"     # prints nothing but OK when valid
+```
+
+Run it from the folder that contains `docker-compose.yml` (the repo root). If you see a path such as
+`~/projects/docker-compose.yml` in an error, you are in the parent folder or the file was saved one level
+too high: it must sit next to the `Makefile`, `Dockerfile` and `.env`.
 
 **3. `Makefile`** (recipes must be indented with a TAB):
 
@@ -178,8 +191,22 @@ health:
 
 ```bash
 make db-up && docker compose ps               # wait for "healthy"
-docker compose exec postgres psql -U "$PGUSER" -d "$PGDATABASE" -c '\dn'
+# Single quotes: the variables are expanded INSIDE the container, where POSTGRES_USER/DB are always set
+docker compose exec postgres sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "\dn"'
+# Interactive session:
+docker compose exec -it postgres sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB"'
 ```
+
+If you see `role "postgres" does not exist`, `psql` was run without the right user. The container
+only has the role named by `POSTGRES_USER` (from your `.env`), so never rely on the default.
+Add a shortcut to the Makefile (TAB-indented) so you do not retype it:
+
+```make
+psql:
+	docker compose exec -it postgres sh -c 'psql -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"'
+```
+
+(`$$` is how a Makefile passes a literal `$` to the shell.)
 
 Test your three triggers by hand (future trade date rejected, UPDATE blocked, symbol upper-cased).
 
@@ -360,7 +387,9 @@ and compare image sizes in your notes.
 
 **Goal:** run the pipeline as a container that talks to the database container.
 
-Add to `docker-compose.yml`:
+Add this under `services:` in `docker-compose.yml`, directly after the `postgres:` block and
+**above** the top-level `volumes:` block, indented 2 spaces like `postgres:`. Then run
+`docker compose config --quiet`.
 
 ```yaml
   app:
@@ -445,7 +474,7 @@ st.bar_chart(
 )
 ```
 
-**2. Compose service:**
+**2. Compose service.** Same rule as L4: add it under `services:`, above the top-level `volumes:` block, and run `docker compose config --quiet`.
 
 ```yaml
   streamlit:
