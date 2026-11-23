@@ -9,13 +9,25 @@ authors = [
 
 requires-python = ">=3.11"
 dependencies = [
-    "asyncpg>=0.32.0",
     "dbt-core>=1.11,<1.12",
     "dbt-postgres>=1.10,<1.11",
+    "numpy>=1.26",
     "pandas>=2.2",
+    "plotly>=5.24",
+    "pre-commit>=4.7.0",
     "psycopg[binary]>=3.2",
+    "pydantic-settings>=2.4",
+    "pyspark>=4.3.0",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
     "pyyaml>=6",
     "requests>=2.32",
+    "ruff>=0.17.4",
+    "secretstr>=0.1.0",
+    "spray>=0.4",
+    "sqlalchemy>=2.0,<2.1",
+    "sqlfluff>=4.5.0",
+    "sqlfluff-templater-dbt>=4.5.0",
     "streamlit>=1.40",
     "tenacity>=9",
     "typer>=0.12",
@@ -32,7 +44,14 @@ build-backend = "uv_build"
 dev = [
     "pre-commit>=4.7.0",
     "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
     "ruff>=0.17.4",
     "sqlfluff>=4.5.0",
     "sqlfluff-templater-dbt>=4.5.0",
+]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "integration: needs the PostgreSQL test database (capmkt_test)",
 ]
