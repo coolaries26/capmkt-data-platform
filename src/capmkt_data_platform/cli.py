@@ -77,7 +77,7 @@ def _emit(payload: dict) -> None:
 def _dsn() -> str:
     return (
         f"host={os.environ.get('PGHOST', 'localhost')} "
-        f"port={os.environ.get('PGPORT', '5432')} "
+        f"port={os.environ.get('PGPORT', '5433')} "
         f"dbname={os.environ['PGDATABASE']} "
         f"user={os.environ['PGUSER']} "
         f"password={os.environ['PGPASSWORD']}"

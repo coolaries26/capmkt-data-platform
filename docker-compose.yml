@@ -1,6 +1,16 @@
 name: capmkt
 
 services:
+  app:
+    build: .
+    image: capmkt:dev
+    profiles: ["tools"]
+    env_file: .env
+    environment:
+      PGHOST: postgres          # the service name, not localhost
+    depends_on:
+      postgres:
+        condition: service_healthy
   postgres:
     image: postgres:16
     container_name: capmkt-postgres
