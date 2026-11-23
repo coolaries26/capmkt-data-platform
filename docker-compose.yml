@@ -14,7 +14,7 @@ services:
   postgres:
     image: postgres:16
     container_name: capmkt-postgres
-    environment: 
+    environment:
       POSTGRES_USER: ${PGUSER}
       POSTGRES_PASSWORD: ${PGPASSWORD}
       POSTGRES_DB: ${PGDATABASE}
@@ -33,4 +33,3 @@ services:
 
 volumes:
   pgdata: {}
-
