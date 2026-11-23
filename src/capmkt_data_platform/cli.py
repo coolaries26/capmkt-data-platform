@@ -2,6 +2,8 @@
 
     python -m capmkt_data_platform.cli download --date 2026-11-06
     python -m capmkt_data_platform.cli backfill --start 2025-07-01 --end 2026-11-06
+    python -m capmkt_data_platform.cli healthcheck
+    python -m capmkt_data_platform.cli load-sample
 
 Exit codes (designed for Airflow's BashOperator):
     0   success (downloaded, or a valid cached file was reused)
@@ -16,8 +18,9 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from collections import Counter
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Annotated
 
@@ -68,6 +71,20 @@ def build_client(settings: Settings) -> NseClient:
 
 def _emit(payload: dict) -> None:
     typer.echo(json.dumps(payload, default=str))
+
+
+# ---------for WSL docker and airflow-----------
+def _dsn() -> str:
+    return (
+        f"host={os.environ.get('PGHOST', 'localhost')} "
+        f"port={os.environ.get('PGPORT', '5433')} "
+        f"dbname={os.environ['PGDATABASE']} "
+        f"user={os.environ['PGUSER']} "
+        f"password={os.environ['PGPASSWORD']}"
+    )
+
+
+# ---------for WSL docker and airflow-----------
 
 
 @app.callback()
@@ -202,39 +219,90 @@ def ingest(
         log.error("%s", exc)
         raise typer.Exit(EXIT_FAILED) from exc
 
-    download = build_client(settings).download_day(
+    download_res = build_client(settings).download_day(
         dataset, cfg["url_template"], trade_date.date(), force=force
     )
 
     audit_conn = data_conn = None
     try:
         audit_conn = connect(settings, autocommit=True)
-        if download.status == NO_FILE:
-            load = record_no_file(audit_conn, dataset, download)
-        elif download.status == FAILED:
-            load = record_download_failure(audit_conn, dataset, download)
+        if download_res.status == NO_FILE:
+            load = record_no_file(audit_conn, dataset, download_res)
+        elif download_res.status == FAILED:
+            load = record_download_failure(audit_conn, dataset, download_res)
         else:  # DOWNLOADED or CACHED
             data_conn = connect(settings)
-            load = load_day(audit_conn, data_conn, dataset, cfg, download)
+            load = load_day(audit_conn, data_conn, dataset, cfg, download_res)
     except (
         psycopg.Error,
         RuntimeError,
     ) as exc:  # database unreachable, or no PGPASSWORD
         log.error("database error: %s", exc)
-        _emit({"download": download.to_dict(), "load": None, "error": str(exc)})
+        _emit({"download": download_res.to_dict(), "load": None, "error": str(exc)})
         raise typer.Exit(EXIT_FAILED) from exc
     finally:
         for conn in (data_conn, audit_conn):
             if conn is not None:
                 conn.close()
 
-    _emit({"download": download.to_dict(), "load": load.to_dict()})
+    _emit({"download": download_res.to_dict(), "load": load.to_dict()})
     if load.status == SUCCESS:
         raise typer.Exit(EXIT_OK)
-    if download.status == NO_FILE:
+    if download_res.status == NO_FILE:
         raise typer.Exit(EXIT_FAILED if fail_on_missing else EXIT_NO_FILE)
     raise typer.Exit(EXIT_FAILED)
 
+
+# ---------for WSL docker and airflow-----------
+@app.command()
+def healthcheck() -> None:
+    """Connect to Postgres, print schema and row counts. Exit 1 on failure."""
+    try:
+        with psycopg.connect(_dsn(), connect_timeout=5) as conn, conn.cursor() as cur:
+            cur.execute(
+                "select count(*) from information_schema.schemata "
+                "where schema_name in ('raw','audit','ref','stg','core')"
+            )
+            schemas = cur.fetchone()[0]
+            cur.execute("select count(*) from raw.bhavcopy_cm")
+            rows = cur.fetchone()[0]
+    except Exception as exc:
+        typer.echo(f"UNHEALTHY: {exc}", err=True)
+        raise typer.Exit(code=EXIT_FAILED) from exc
+    typer.echo(f"OK schemas={schemas} raw.bhavcopy_cm rows={rows}")
+
+
+@app.command("load-sample")
+def load_sample() -> None:
+    """Stand-in ingest job: idempotently loads 3 sample rows for a fixed past date."""
+    sample_date = date(2026, 11, 13)
+    rows = [
+        ("AAA", 100, 110, 95, 105, 100),
+        ("BBB", 50, 52, 49, 51, 50),
+        ("CCC", 200, 210, 198, 205, 199),
+    ]
+    with psycopg.connect(_dsn()) as conn, conn.cursor() as cur:
+        cur.execute("delete from raw.bhavcopy_cm where trade_date = %s", (sample_date,))
+        cur.execute(
+            "update audit.ingestion_log set status = 'SUPERSEDED' "
+            "where dataset = 'sample' and trade_date = %s and status = 'SUCCESS'",
+            (sample_date,),
+        )
+        cur.execute(
+            "insert into audit.ingestion_log (dataset, trade_date, source_url, status, rows_loaded, finished_at) "
+            "values ('sample', %s, 'local://sample', 'SUCCESS', %s, now()) returning load_id",
+            (sample_date, len(rows)),
+        )
+        load_id = cur.fetchone()[0]
+        cur.executemany(
+            "insert into raw.bhavcopy_cm (load_id, trade_date, symbol, series, open_price, high_price, "
+            "low_price, close_price, prev_close_price) values (%s, %s, %s, 'EQ', %s, %s, %s, %s, %s)",
+            [(load_id, sample_date, *r) for r in rows],
+        )
+    typer.echo(f"loaded {len(rows)} sample rows, load_id={load_id}")
+
+
+# ---------for WSL docker and airflow-----------
 
 if __name__ == "__main__":
     app()

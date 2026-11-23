@@ -2,7 +2,7 @@
 
 FROM python:3.11-slim-bookworm AS builder
 # Pin to the version printed by `uv --version` on your machine
-COPY --from=ghcr.io/astral-sh/uv:0.X.Y /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.13.9 /uv /uvx /bin/
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
 WORKDIR /app
 

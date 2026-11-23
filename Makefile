@@ -10,7 +10,7 @@ db-reset:
 	docker compose down -v && docker compose up -d
 
 db-restart:
-	docker compose down && docker compose up -d postgres 
+	docker compose down && docker compose up -d postgres
 
 build:
 	docker build -t capmkt:dev .
