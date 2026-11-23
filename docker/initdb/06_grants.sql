@@ -1,0 +1,10 @@
+ALTER SCHEMA raw        OWNER TO capmkt;
+ALTER SCHEMA audit      OWNER TO capmkt;
+ALTER SCHEMA ref        OWNER TO capmkt;
+ALTER SCHEMA stg        OWNER TO capmkt;
+ALTER SCHEMA int        OWNER TO capmkt;
+ALTER SCHEMA core       OWNER TO capmkt;
+ALTER SCHEMA recon      OWNER TO capmkt;
+ALTER SCHEMA monitoring OWNER TO capmkt;
+ALTER SCHEMA snapshots  OWNER TO capmkt;
+ALTER SCHEMA dq         OWNER TO capmkt;
